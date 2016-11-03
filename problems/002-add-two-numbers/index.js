@@ -19,4 +19,4 @@ function twoNum(nums, target) {
     return result;
 }
 
-module.exports = twoNum;
+module.exports = twoNum,twoNum;
