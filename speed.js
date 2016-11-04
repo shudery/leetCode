@@ -2,7 +2,7 @@ var fs = require('fs');
 var Benchmark = require('benchmark');
 var colors = require('colors');
 var suite = new Benchmark.Suite;
-var num = process.env.num || 001;
+var num = process.env.n || 001;
 
 var path = './problems';
 var problems = fs.readdirSync(path);

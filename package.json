@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "mocha test",
-    "start": "mocha test && node speed.js"
+    "start": "mocha test && node speed.js",
+    "new": "mkdir ./problems/000 && cp ./problems/000-template/index.js ./problems/000/index.js && cp ./problems/000-template/test.js ./problems/000/test.js"
   },
   "repository": {
     "type": "git",

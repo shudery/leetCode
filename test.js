@@ -3,13 +3,12 @@ var expect = require('chai').expect;
 var Benchmark = require('benchmark');
 var colors = require('colors');
 var suite = new Benchmark.Suite;
-var num = process.env.num;
+var num = process.env.n;
 
 var path = './problems';
 var problems = fs.readdirSync(path);
 
 console.log('<--start fns AC test-->'.underline)
-
 if (num) {
     //测试指定目录
     let reg = new RegExp(num);
