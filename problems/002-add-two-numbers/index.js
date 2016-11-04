@@ -6,7 +6,7 @@
  * @param  {number} target [description]
  * @return {number[]}        [description]
  */
-function twoNum(nums, target) {
+function twoSum1(nums, target) {
     let result = [];
     nums.forEach((value, index) => {
         let flag = target - value;
@@ -18,5 +18,13 @@ function twoNum(nums, target) {
     })
     return result;
 }
+function twoSum2(nums, target) {
+  var a = [];
+  for (var i = 0, len = nums.length; i < len; i++) {
+    var tmp = target - nums[i];
+    if (a[tmp] !== undefined) return [a[tmp], i];
+    a[nums[i]] = i;
+  }
+};
 
-module.exports = twoNum,twoNum;
+module.exports = [twoSum1,twoSum2];
