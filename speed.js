@@ -22,7 +22,7 @@ let demo = require('./problems/' + problem + '/test.js');
 speedTest(problem, fns, demo)
 
 function speedTest(problem, fns, demo) {
-	console.log('start fns speed test:'+problem+'\n')
+	console.log(('<--start fns speed test-->'+problem).underline+'\n')
 	//非数组引用报错
     if (Object.prototype.toString.call(fns) !== '[object Array]') {
         console.log(('./problems/' + problem + '/index.js \n--you can export a array fns for comparing speed between 2 or more fns').yellow)

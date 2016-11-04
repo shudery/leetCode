@@ -8,7 +8,7 @@ var num = process.env.num;
 var path = './problems';
 var problems = fs.readdirSync(path);
 
-console.log('start fns ac test:')
+console.log('<--start fns AC test-->'.underline)
 
 if (num) {
     //测试指定目录
