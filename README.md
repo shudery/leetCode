@@ -5,7 +5,8 @@
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|2|[Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/)| [JavaScript](./problems/002-add-two-numbers/addTwoNumbers/addTwoNumbers.cpp)|Medium|
+|419|[Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board/)| [JavaScript](./problems/419-battleships-in-a-board/index.js)|Medium|
+|2|[Add Two Numbers](https://oj.leetcode.com/problems/add-two-numbers/)| [JavaScript](./problems/002-add-two-numbers/index.js)|Medium|
 |1|[Two Sum](https://oj.leetcode.com/problems/two-sum/)| [JavaScript](./problems/001-two-num/index.js)|Easy|
 
 ### Test

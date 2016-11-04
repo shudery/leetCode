@@ -43,7 +43,6 @@ function countBattleships1(board) {
     return count;
 }
 
-module.exports = [countBattleships1, countBattleships2];
 
 function countBattleships2(board) {
     const dir = [
@@ -82,3 +81,6 @@ function countBattleships2(board) {
 
     return ans;
 };
+
+module.exports = [countBattleships1, countBattleships2];
+
