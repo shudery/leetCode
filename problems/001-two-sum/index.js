@@ -35,7 +35,4 @@ function twoSum2(nums, target) {
     }
 };
 
-function twoSum3(nums, target) {
- 
-};
 module.exports = [twoSum1, twoSum2];
