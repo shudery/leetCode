@@ -5,9 +5,9 @@
  */
 
 
-function main(nums, target) {
+function main(nums) {
    
-    return result;
+    return nums;
 }
 
 module.exports = main;
