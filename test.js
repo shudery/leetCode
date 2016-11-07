@@ -2,6 +2,7 @@ var fs = require('fs');
 var expect = require('chai').expect;
 var Benchmark = require('benchmark');
 var colors = require('colors');
+var _ = require('daguo');
 var suite = new Benchmark.Suite;
 var num = process.env.n;
 
@@ -43,7 +44,9 @@ function test(problem){
             //每个输入例子测试
             demo.forEach((val, i) => {
                 it("function:" + fn.name + "  demo-" + i, function() {
-                    expect(fn.apply(null, val.input)).to.deep.equal(val.output);
+                    //不能直接传入原始数组的索引，不然可能test中的input被污染，影响下一个执行函数
+                    let arr = _.clone(val);
+                    expect(fn.apply(null, arr.input)).to.deep.equal(arr.output);
                 });
             })
         })

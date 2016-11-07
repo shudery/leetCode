@@ -23,24 +23,21 @@ Example:
 A = [1, 2, 3, 4]
 
 return: 3, for 3 arithmetic slices in A: [1, 2, 3], [2, 3, 4] and [1, 2, 3, 4] itself.
+ * 
  * @param {number[]} A
  * @return {number}
  */
+
+//两次循环
 function numberOfArithmeticSlices2(A) {
     let count = 0;
     let len = A.length
     for (let i = 0; i < len; i++) {
-        // let arr = [];
-        // arr.push(A[i])
-        // arr.push(A[i + 1])
         let flag = A[i + 1] - A[i];
         let pre = A[i + 1];
         //确定序列前两位之后，循环找出序列最长长度
         for (let k = i + 2; k < len; k++) {
             if (flag === A[k] - pre) {
-                // arr.push(A[k])
-                // console.log('i:' + i + ',j:' + i + 1 + ',k:' + k + ':' + arr)
-
                 // 序列每增加一位，多一种序列的可能
                 count++;
                 // pre保持为序列的最后一位
@@ -53,7 +50,7 @@ function numberOfArithmeticSlices2(A) {
     }
     return count;
 };
-
+//一次循环 空间换时间
 function numberOfArithmeticSlices1(A) {
 
     let begin = true;

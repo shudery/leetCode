@@ -1,6 +1,7 @@
 var fs = require('fs');
 var Benchmark = require('benchmark');
 var colors = require('colors');
+var _ = require('daguo');
 var suite = new Benchmark.Suite;
 var num = process.env.n || 001;
 
@@ -16,8 +17,9 @@ problems.forEach((val) => {
     }
 })
 let fns = require('./problems/' + problem + '/index.js');
-let demo = require('./problems/' + problem + '/test.js');
+let demos = require('./problems/' + problem + '/test.js');
 
+let demo = _.clone(demos);
 //函数性能测试
 speedTest(problem, fns, demo)
 

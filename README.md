@@ -12,6 +12,7 @@
 |344|[Reverse String](https://leetcode.com/problems/reverse-string/)| [JavaScript](./problems/344-reverse-string/index.js)|Easy|
 |338|[Counting Bits](https://leetcode.com/problems/counting-bits/)| [JavaScript](./problems/338-counting-bits/index.js)|Medium|
 |292|[Nim Game](https://leetcode.com/problems/nim-game/)| [JavaScript](./problems/292-nim-game/index.js)|Medium|
+|136|[Single Number](https://leetcode.com/problems/single-number/)| [JavaScript](./problems/136-single-number/index.js)|Easy|
 |2|[Add Two Numbers](https://oj.leetcode.com/problems/counting-bits/)| [JavaScript](./problems/338-counting-bits/index.js)|Medium|
 |1|[Two Sum](https://oj.leetcode.com/problems/two-sum/)| [JavaScript](./problems/001-two-num/index.js)|Easy|
 
