@@ -14,8 +14,8 @@
 |338|[Counting Bits](https://leetcode.com/problems/counting-bits/)| [JavaScript](./problems/338-counting-bits/index.js)|Medium|
 |292|[Nim Game](https://leetcode.com/problems/nim-game/)| [JavaScript](./problems/292-nim-game/index.js)|Medium|
 |136|[Single Number](https://leetcode.com/problems/single-number/)| [JavaScript](./problems/136-single-number/index.js)|Easy|
-|2|[Add Two Numbers](https://oj.leetcode.com/problems/counting-bits/)| [JavaScript](./problems/338-counting-bits/index.js)|Medium|
-|1|[Two Sum](https://oj.leetcode.com/problems/two-sum/)| [JavaScript](./problems/001-two-num/index.js)|Easy|
+|002|[Add Two Numbers](https://oj.leetcode.com/problems/counting-bits/)| [JavaScript](./problems/338-counting-bits/index.js)|Medium|
+|001|[Two Sum](https://oj.leetcode.com/problems/two-sum/)| [JavaScript](./problems/001-two-num/index.js)|Easy|
 
 ### Test
 安装依赖
