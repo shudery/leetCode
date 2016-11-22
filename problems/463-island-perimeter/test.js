@@ -1,7 +1,7 @@
 // [], target
 module.exports = [{
-	input: [5],
-	output: 5,
+	input: [[[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]],
+	output: 16,
 },
 // {
 // 	input: [[1,-5]],

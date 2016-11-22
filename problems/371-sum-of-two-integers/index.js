@@ -48,4 +48,9 @@ function getSum(a, b) {
     return result
 };
 
-module.exports = getSum;
+//厉害了我的哥，利用位运算实现加法，速度飞快，from十年踪迹
+function add(a, b) {
+    return (((a & b) << 1) + (a ^ b));
+};
+
+module.exports = [getSum, add];
