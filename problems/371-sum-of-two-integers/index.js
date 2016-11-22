@@ -49,6 +49,12 @@ function getSum(a, b) {
 };
 
 //厉害了我的哥，利用位运算实现加法，速度飞快，from十年踪迹
+// a   b a + b   进位
+// 0   0   0   无
+// 0   1   1   无
+// 1   0   1   无
+// 1   1   0   有
+
 function add(a, b) {
     return (((a & b) << 1) + (a ^ b));
 };
