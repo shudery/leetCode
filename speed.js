@@ -1,7 +1,8 @@
-var fs = require('fs');
 var Benchmark = require('benchmark');
 var colors = require('colors');
+var fs = require('fs');
 var _ = require('daguo');
+
 var suite = new Benchmark.Suite;
 var num = process.env.n || 001;
 
@@ -11,33 +12,36 @@ var problems = fs.readdirSync(path);
 //匹配对应题目
 let reg = new RegExp(num);
 let problem = '';
-problems.forEach((val) => {
-    if (reg.test(val)) {
-        problem = val;
+for (let i = 0; i < problems.length; i++) {
+    if (reg.test(problems[i])) {
+        problem = problems[i];
+        break;
     }
-})
+}
+
+
 let fns = require('./problems/' + problem + '/index.js');
 let demos = require('./problems/' + problem + '/test.js');
-
+//传值不传引用
 let demo = _.clone(demos);
 //函数性能测试
 speedTest(problem, fns, demo)
 
 function speedTest(problem, fns, demo) {
-	console.log(('<--start fns speed test-->'+problem).underline+'\n')
-	//非数组引用报错
+    console.log(('<--start fns speed test-->' + problem).underline + '\n')
+        //非数组引用报错
     if (Object.prototype.toString.call(fns) !== '[object Array]') {
         console.log(('./problems/' + problem + '/index.js \n--you can export a array fns for comparing speed between 2 or more fns').yellow)
         return;
     }
     //时间性能排名
     var timeRank = [];
-    
+
     var str = 'suite';
     fns.forEach((fn, i) => {
         str += '.add("' + fn.name + '", function() {\
-	    	fns[' + i + '].apply(null,demo[0].input);\
-	    })'
+            fns[' + i + '].apply(null,demo[0].input);\
+        })'
     });
     eval(str)
         .on('cycle', function(event) {
@@ -61,9 +65,9 @@ function speedTest(problem, fns, demo) {
             }
             var label = [];
             timeRank.forEach((val) => {
-                label.push(val.name + ' ' + val.time)
-            })
-            // console.log(('Alltest : ' + this.filter('successful').map('name')).yellow);
+                    label.push(val.name + ' >>> ' + val.time)
+                })
+                // console.log(('Alltest : ' + this.filter('successful').map('name')).yellow);
             console.log(('Allrank : ' + label.join('\n          ')).blue);
             console.log(('Fastest : ' + this.filter('fastest').map('name')).green);
             console.log(('Slowest : ' + this.filter('slowest').map('name')).red);
