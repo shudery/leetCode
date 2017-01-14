@@ -11,5 +11,6 @@ cp ./problems/999-template/index.js ./problems/${num}/index.js
 echo "create index.js"
 cp ./problems/999-template/test.js ./problems/${num}/test.js
 echo "create test.js"
-echo "\r|${n}|[${num}](https://oj.leetcode.com/problems/${title}/)| [JavaScript](./problems/${num}/index.js)|Easy|" >> README.md
+# 在README文件中插入最新一题
+echo "\r|${n}|[${title}](https://oj.leetcode.com/problems/${title}/)| [JavaScript](./problems/${num}/index.js)|Easy|" >> README.md
 echo "add info to README.md."
