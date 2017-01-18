@@ -35,7 +35,7 @@ n=001 npm start
 |419|[battleships-in-a-board](https://leetcode.com/problems/battleships-in-a-board/)| [JavaScript](./problems/419-battleships-in-a-board/index.js)|Medium|
 |413|[arithmetic-slices](https://leetcode.com/problems/arithmetic-slices/)| [JavaScript](./problems/413-arithmetic-slices/index.js)|Medium|
 |412|[fizz-buzz](https://leetcode.com/problems/fizz-buzz/)| [JavaScript](./problems/412-fizz-buzz/index.js)|Easy|
-|406|[queue-reconstruction-by-height](https://leetcode.com/problems/queue-reconstruction-by-height/)| [JavaScript](./problems/406-queue-reconstruction-by-height/index.js)|Easy|
+|406|[queue-reconstruction-by-height](https://leetcode.com/problems/queue-reconstruction-by-height/)| [JavaScript](./problems/406-queue-reconstruction-by-height/index.js)|Medium|
 |371|[sum-of-two-integers](https://leetcode.com/problems/sum-of-two-integers/)| [JavaScript](./problems/371-sum-of-two-integers/index.js)|Easy|
 |344|[reverse-string](https://leetcode.com/problems/reverse-string/)| [JavaScript](./problems/344-reverse-string/index.js)|Easy|
 |338|[counting-bits](https://leetcode.com/problems/counting-bits/)| [JavaScript](./problems/338-counting-bits/index.js)|Medium|

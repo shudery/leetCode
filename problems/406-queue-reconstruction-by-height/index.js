@@ -19,32 +19,15 @@ Output:
  * @return {number[][]}
  */
 var reconstructQueue = function(people) {
-    let len = people.length;
-    let objArr = [];
+    //从大到小排序，相等的比较第二个参数
+    people.sort((a, b) => a[0] === b[0] ? a[1] - b[1] : b[0] - a[0]);
+    
     let arr = [];
-    let obj = {};
-    for (let j = 0; j < len; j++) {
-        for (let i = 0; i < len - arr.length; i++) {
-            if (people[i][1] === j) {
-                let count = 0;
-                for (let k = 0; k < arr.length; k++) {
-                    if (arr[k][0] >= people[i][0]) {
-                        count++;
-                    }
-                    if (count >= people[i][1]) {
-                        arr.splice(k, 0, people[i]);
-                        break;
-                    }
-                }
-                if (count < people[i][0]) {
-                    people[i].push(true);
-                }
-            }
-        }
-    }
+    people.forEach((item) => {
+        arr.splice(item[1], 0, item);
+    });
 
     return arr;
-
 };
 
 module.exports = reconstructQueue;
