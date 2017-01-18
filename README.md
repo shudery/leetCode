@@ -1,7 +1,9 @@
 # leetCode
+![Travis](https://img.shields.io/travis/rust-lang/rust.svg)
+
 没事刷刷算法题： [leetcode](https://leetcode.com/problemset/algorithms/)
 
-### Test
+### 功能和性能测试
 安装依赖
 ```
 npm install
@@ -22,7 +24,7 @@ n=001 npm start
 ```
 ./crepro.sh {题目序号}-{题目(-分隔单词)}
 ```
-如``./crepro.sh 999-template-test``
+例如`./crepro.sh 999-template-test`
 
 ###LeetCode Algorithm
 
