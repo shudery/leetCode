@@ -37,13 +37,13 @@ function speedTest(problem, fns, demo) {
     //时间性能排名
     var timeRank = [];
 
-    var str = 'suite';
+    var evalStr = 'suite';
     fns.forEach((fn, i) => {
-        str += '.add("' + fn.name + '", function() {\
+        evalStr += '.add("' + fn.name + '", function() {\
             fns[' + i + '].apply(null,demo[0].input);\
         })'
     });
-    eval(str)
+    eval(evalStr)
         .on('cycle', function(event) {
             var info = String(event.target);
             var obj = {};

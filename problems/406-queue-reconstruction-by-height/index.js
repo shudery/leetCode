@@ -21,11 +21,11 @@ var reconstructQueue = function(people) {
     //从大到小排序，相等的比较第二个参数
     people.sort((a, b) => a[0] === b[0] ? a[1] - b[1] : b[0] - a[0]);
     
+    //根据第二个参数构造数组
     let arr = [];
     people.forEach((item) => {
         arr.splice(item[1], 0, item);
     });
-
     return arr;
 };
 
