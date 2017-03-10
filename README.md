@@ -22,9 +22,9 @@ n=001 npm start
 ```
 利用脚本一键生成新题目目录并插入到README文件中
 ```
-./crepro.sh {题目序号}-{题目(-分隔单词)}
+./crepro.sh {题目序号}-{题目(-分隔单词)} {题目难度}
 ```
-例如`./crepro.sh 999-template-test`
+例如`./crepro.sh 999-template-test Easy`
 
 ###LeetCode Algorithm
 

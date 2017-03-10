@@ -1,6 +1,6 @@
 // title  : 535-encode-and-decode-tinyurl
 // Author : Shudery
-// Date   : 2017-01-11
+// Date   : 2017-03-10
  
 /****************************************************************************
 TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk.
