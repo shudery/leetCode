@@ -44,4 +44,4 @@ n=001 npm start
 |104|[maximum-depth-of-binary-tree](https://oj.leetcode.com/problems/maximum-depth-of-binary-tree/)| [JavaScript](./problems/104-maximum-depth-of-binary-tree/index.js)|Easy|
 |001|[two-sum](https://oj.leetcode.com/problems/two-sum/)| [JavaScript](./problems/001-two-num/index.js)|Easy|
 |461|[hamming-distance](https://oj.leetcode.com/problems/hamming-distance/)| [JavaScript](./problems/461-hamming-distance/index.js)|Easy|
-|535|[encode-and-decode-tinyurl](https://oj.leetcode.com/problems/encode-and-decode-tinyurl/)| [JavaScript](./problems/535-encode-and-decode-tinyurl/index.js)|Medium|
+|535|[encode-and-decode-tinyurl](https://oj.leetcode.com/problems/encode-and-decode-tinyurl/)| [JavaScript](./problems/535-encode-and-decode-tinyurl/index.js)|Medium||476|[number-complement](https://oj.leetcode.com/problems/number-complement/)| [JavaScript](./problems/476-number-complement/index.js)|Easy|

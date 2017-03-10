@@ -1,7 +1,7 @@
 // title  : 535-encode-and-decode-tinyurl
 // Author : Shudery
 // Date   : 2017-03-10
- 
+
 /****************************************************************************
 TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk.
 
@@ -18,10 +18,16 @@ var long = 'https://leetcode.com/problems/';
  * @return {string}
  */
 var encode = function(longUrl) {
-    var str = longUrl.split(long);
+    var str = longUrl.split(long)[1];
+    var code = [];
+    str.split('').forEach((v, i) => {
+        code.push(v.charCodeAt());
+    });
     
+    return short + 
+        console.log(str);
 };
-
+encode('https://leetcode.com/problems/abc-def');
 /**
  * Decodes a shortened URL to its original URL.
  *
@@ -29,7 +35,7 @@ var encode = function(longUrl) {
  * @return {string}
  */
 var decode = function(shortUrl) {
-    
+
 };
 
 /**
