@@ -8,10 +8,33 @@ TinyURL is a URL shortening service where you enter a URL such as https://leetco
 Design the encode and decode methods for the TinyURL service. There is no restriction on how your encode/decode algorithm should work. You just need to ensure that a URL can be encoded to a tiny URL and the tiny URL can be decoded to the original URL
 
 ******************************************************************************/
+var short = 'http://tinyurl.com/';
+var long = 'https://leetcode.com/problems/';
 
-var main = function(nums) {
-   
-    return nums;
-}
+/**
+ * Encodes a URL to a shortened URL.
+ *
+ * @param {string} longUrl
+ * @return {string}
+ */
+var encode = function(longUrl) {
+    var str = longUrl.split(long);
+    
+};
 
-module.exports = main;
+/**
+ * Decodes a shortened URL to its original URL.
+ *
+ * @param {string} shortUrl
+ * @return {string}
+ */
+var decode = function(shortUrl) {
+    
+};
+
+/**
+ * Your functions will be called as such:
+ * decode(encode(url));
+ */
+
+module.exports = null;

@@ -43,7 +43,8 @@ function test(problem){
         fns.forEach((fn, index) => {
             //每个输入例子测试
             demo.forEach((val, i) => {
-                it("function:" + fn.name + "  demo-" + i, function() {
+                //如果该题目不需要测试则在module.exports =null即可
+                fn && it("function:" + fn.name + "  demo-" + i, function() {
                     //不能直接传入原始数组的索引，不然可能test中的input被污染，影响下一个执行函数
                     let arr = _.clone(val);
                     expect(fn.apply(null, arr.input)).to.deep.equal(arr.output);
