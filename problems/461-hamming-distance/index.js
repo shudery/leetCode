@@ -23,7 +23,10 @@ The above arrows point to positions where the corresponding bits are different.
  *****************************************************************************/
 
 //两个数异或，计算结果中1的个数就是汉明距离
-//join 解决末尾为0时多出的''空字符串
-var hammingDistance = (x, y) => String.prototype.split.call((x ^ y).toString(2), '0').join('').length;
+//join 解决末尾为0时多出的''空字符串 也可用filter处理
+var hammingDistance = (x, y, t = (x ^ y).toString(2)) => [].filter.call(t, v => +v).length;
 
-module.exports = hammingDistance;
+//better perform
+var hammingDistance2 = (x, y, t = (x ^ y).toString(2)) => ''.split.call(t, '0').join('').length;
+
+module.exports = [hammingDistance, hammingDistance2];

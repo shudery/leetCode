@@ -42,4 +42,6 @@ n=001 npm start
 |292|[nim-game](https://leetcode.com/problems/nim-game/)| [JavaScript](./problems/292-nim-game/index.js)|Medium|
 |136|[single-number](https://leetcode.com/problems/single-number/)| [JavaScript](./problems/136-single-number/index.js)|Easy|
 |104|[maximum-depth-of-binary-tree](https://oj.leetcode.com/problems/maximum-depth-of-binary-tree/)| [JavaScript](./problems/104-maximum-depth-of-binary-tree/index.js)|Easy|
-|001|[two-sum](https://oj.leetcode.com/problems/two-sum/)| [JavaScript](./problems/001-two-num/index.js)|Easy||461|[hamming-distance](https://oj.leetcode.com/problems/hamming-distance/)| [JavaScript](./problems/461-hamming-distance/index.js)|Easy|
+|001|[two-sum](https://oj.leetcode.com/problems/two-sum/)| [JavaScript](./problems/001-two-num/index.js)|Easy|
+|461|[hamming-distance](https://oj.leetcode.com/problems/hamming-distance/)| [JavaScript](./problems/461-hamming-distance/index.js)|Easy|
+|535|[encode-and-decode-tinyurl](https://oj.leetcode.com/problems/encode-and-decode-tinyurl/)| [JavaScript](./problems/535-encode-and-decode-tinyurl/index.js)|Medium|
