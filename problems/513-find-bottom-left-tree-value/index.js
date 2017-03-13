@@ -41,7 +41,7 @@ Note: You may assume the tree (i.e., the given root node) is not NULL
  */
 var findBottomLeftValue = function(root) {
     var ans = {
-    	val:root.val,
+        val: root.val,
         depth: 0,
     };
 
@@ -58,7 +58,7 @@ var findBottomLeftValue = function(root) {
             root.right && find(root.right, depth + 1);
         }
     };
-    
+
     find(root, 1);
     return ans.val;
 };
