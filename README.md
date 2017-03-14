@@ -49,3 +49,4 @@ n=001 npm start
 |500|[keyboar-row](https://oj.leetcode.com/problems/keyboar-row/)| [JavaScript](./problems/500-keyboar-row/index.js)|Easy|
 |496|[next-greater-element-i](https://oj.leetcode.com/problems/next-greater-element-i/)| [JavaScript](./problems/496-next-greater-element-i/index.js)|Easy||513|[find-bottom-left-tree-value](https://oj.leetcode.com/problems/find-bottom-left-tree-value/)| [JavaScript](./problems/513-find-bottom-left-tree-value/index.js)|Medium|
 |485|[max-consecutive-ones](https://oj.leetcode.com/problems/max-consecutive-ones/)| [JavaScript](./problems/485-max-consecutive-ones/index.js)|Easy|
+|520|[detect-capital](https://oj.leetcode.com/problems/detect-capital/)| [JavaScript](./problems/520-detect-capital/index.js)|Easy|
