@@ -7,8 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test",
-    "start": "mocha test && node speed.js",
+    "test": "mocha problems.test.js",
+    "start": "mocha problems.test.js && node perform.test.js",
     "new": "mkdir ./problems/000- && cp ./problems/999-template/index.js ./problems/000-/index.js && cp ./problems/999-template/test.js ./problems/000-/test.js"
   },
   "repository": {
