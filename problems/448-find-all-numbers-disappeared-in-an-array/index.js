@@ -29,4 +29,5 @@ var findDisappearedNumbers = function(nums) {
     }
     return ans;
 };
-module.exports = findDisappearedNumbers;
+//性能有问题
+module.exports = null;
