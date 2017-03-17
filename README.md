@@ -51,3 +51,4 @@ n=001 npm start
 |513|[find-bottom-left-tree-value](https://oj.leetcode.com/problems/find-bottom-left-tree-value/)| [JavaScript](./problems/513-find-bottom-left-tree-value/index.js)|Medium|
 |485|[max-consecutive-ones](https://oj.leetcode.com/problems/max-consecutive-ones/)| [JavaScript](./problems/485-max-consecutive-ones/index.js)|Easy|
 |520|[detect-capital](https://oj.leetcode.com/problems/detect-capital/)| [JavaScript](./problems/520-detect-capital/index.js)|Easy||448|[find-all-numbers-disappeared-in-an-array](https://oj.leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)| [JavaScript](./problems/448-find-all-numbers-disappeared-in-an-array/index.js)|Easy|
+|442|[find-all-duplicates-in-an-array](https://oj.leetcode.com/problems/find-all-duplicates-in-an-array/)| [JavaScript](./problems/442-find-all-duplicates-in-an-array/index.js)|Medium|
