@@ -38,10 +38,7 @@ var findPoisonedDuration = function(timeSeries, duration) {
     var ans = duration;
     timeSeries.reduce((pre,cur)=>{
     	let diff = cur - pre;
-    	if(diff >= duration)
-    		ans += duration;
-    	else
-    		ans += diff;
+    	ans += diff >= duration ? duration : diff;
     	return cur;
     })
     return ans;
