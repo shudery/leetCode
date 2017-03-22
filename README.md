@@ -53,3 +53,4 @@ n=001 npm start
 |520|[detect-capital](https://oj.leetcode.com/problems/detect-capital/)| [JavaScript](./problems/520-detect-capital/index.js)|Easy||448|[find-all-numbers-disappeared-in-an-array](https://oj.leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)| [JavaScript](./problems/448-find-all-numbers-disappeared-in-an-array/index.js)|Easy|
 |442|[find-all-duplicates-in-an-array](https://oj.leetcode.com/problems/find-all-duplicates-in-an-array/)| [JavaScript](./problems/442-find-all-duplicates-in-an-array/index.js)|Medium|
 |258|[add-digits](https://oj.leetcode.com/problems/add-digits/)| [JavaScript](./problems/258-add-digits/index.js)|Easy|
+|495|[teemo-attacking](https://oj.leetcode.com/problems/teemo-attacking/)| [JavaScript](./problems/495-teemo-attacking/index.js)|Medium|

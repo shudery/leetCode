@@ -23,10 +23,16 @@ var addDigits = function(num) {
         num = strArr.reduce((pre, cur) => {
             return (+pre) + (+cur);
         })
-    }
-    while (num > 9){
-    	splitNum(num);
+    };
+    while (num > 9) {
+        splitNum(num);
     };
     return num;
 };
-module.exports = addDigits;
+
+// without loop
+var addDigits2 = function(num) {
+    var res = num % 9;
+    return (res != 0 || num == 0) ? res : 9;
+}
+module.exports = [addDigits,addDigits2];
