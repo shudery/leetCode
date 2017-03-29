@@ -23,14 +23,27 @@ Output:
  */
 var findDuplicates = function(nums) {
     var arr = [];
+    var ans = [];
     for(let i=0; i<nums.length; i++){
-        let num = nums[i];
-            nums[i] = -1;
-        if(nums.indexOf(num) !== -1){
-            arr.push(num);
-        }
+        if(arr.indexOf(nums[i]) === -1)
+        	arr.push(nums[i]);
+        else
+        	ans.push(nums[i]);
     }
-    return arr
+    return ans;
 };
 //同448 性能问题
-module.exports = null;
+//
+var findDuplicates2 = function(nums) {
+	var arr = [];
+    var set = new Set();
+    nums.forEach(v=>{
+    	let len = set.size;
+    	set.add(v);
+    	if(set.size == len)
+    		arr.push(v);
+    })
+    return arr
+};
+
+module.exports = [findDuplicates,findDuplicates2];

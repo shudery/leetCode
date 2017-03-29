@@ -23,11 +23,24 @@ Output:
  */
 var findDisappearedNumbers = function(nums) {
     var ans = [];
-    for(let i=1; i<nums.length+1; i++){
-        if(nums.indexOf(i) === -1)
+    for (let i = 1; i < nums.length + 1; i++) {
+        if (nums.indexOf(i) === -1)
             ans.push(i);
     }
     return ans;
 };
 //性能有问题
-module.exports = null;
+
+
+var findDisappearedNumbers2 = function(nums) {
+    var ans = [];
+    var strNums = ',' + nums + ',';
+
+    for (let i = 1; i < nums.length + 1; i++) {
+        let reg = new RegExp(',' + i + ',');
+        if (!reg.test(strNums))
+            ans.push(i);
+    }
+    return ans;
+};
+module.exports = [findDisappearedNumbers, findDisappearedNumbers2];

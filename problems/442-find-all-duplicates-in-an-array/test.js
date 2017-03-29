@@ -1,9 +1,5 @@
 module.exports = [{
-	input: [5],
-	output: 5,
-},
-{
-	input: [[1,-5]],
-	output: -4,
+	input: [[4,3,2,7,8,2,3,1]],
+	output: [2,3],
 },
 ]
