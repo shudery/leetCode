@@ -54,3 +54,4 @@ n=001 npm start
 |442|[find-all-duplicates-in-an-array](https://oj.leetcode.com/problems/find-all-duplicates-in-an-array/)| [JavaScript](./problems/442-find-all-duplicates-in-an-array/index.js)|Medium|
 |258|[add-digits](https://oj.leetcode.com/problems/add-digits/)| [JavaScript](./problems/258-add-digits/index.js)|Easy|
 |495|[teemo-attacking](https://oj.leetcode.com/problems/teemo-attacking/)| [JavaScript](./problems/495-teemo-attacking/index.js)|Medium|
+|529|[minesweeper](https://oj.leetcode.com/problems/minesweeper/)| [JavaScript](./problems/529-minesweeper/index.js)|Medium|
