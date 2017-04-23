@@ -45,6 +45,7 @@ var updateBoard = function(board, click) {
     //不是E不能点
     if (board[row][col] != 'E')
         return board;
+    
     //记录递归查雷时，已经查过的点
     let checked = [];
 
@@ -77,14 +78,4 @@ var updateBoard = function(board, click) {
     find(row, col);
     return board;
 };
-console.log(updateBoard([
-    ['E', 'E', 'E', 'E', 'E', 'E', 'E', 'E'],
-    ['E', 'E', 'E', 'E', 'E', 'E', 'E', 'M'],
-    ['E', 'E', 'M', 'E', 'E', 'E', 'E', 'E'],
-    ['M', 'E', 'E', 'E', 'E', 'E', 'E', 'E'],
-    ['E', 'E', 'E', 'E', 'E', 'E', 'E', 'E'],
-    ['E', 'E', 'E', 'E', 'E', 'E', 'E', 'E'],
-    ['E', 'E', 'E', 'E', 'E', 'E', 'E', 'E'],
-    ['E', 'E', 'M', 'M', 'E', 'E', 'E', 'E']
-], [0, 0]));
 module.exports = updateBoard;

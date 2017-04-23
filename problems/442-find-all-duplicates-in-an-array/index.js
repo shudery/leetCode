@@ -32,18 +32,20 @@ var findDuplicates = function(nums) {
     }
     return ans;
 };
+
 //同448 性能问题
 //
-var findDuplicates2 = function(nums) {
-	var arr = [];
-    var set = new Set();
-    nums.forEach(v=>{
-    	let len = set.size;
-    	set.add(v);
-    	if(set.size == len)
-    		arr.push(v);
-    })
-    return arr
+var findDuplicates2 = function(arr) {
+	// let arr = nums.sort();
+    let obj = {};
+    let ans = [];
+    for(let i=0; i<arr.length; i++){
+        if(obj[arr[i]])
+            ans.push(arr[i]);
+        else
+            obj[arr[i]] = true;
+    }
+    return ans;
 };
 
 module.exports = [findDuplicates,findDuplicates2];

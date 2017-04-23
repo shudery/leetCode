@@ -11,7 +11,7 @@
  * @return {number[]}        [description]
  */
 
-
+console.log(twoSum1([2,7,11,15],9))
 function twoSum1(nums, target) {
     let result = [];
     nums.forEach((value, index) => {
