@@ -8,7 +8,7 @@
 ```
 npm install
 ```
-测试所有题目
+测试所有题目是否通过
 ```
 npm test
 ```
@@ -50,8 +50,9 @@ n=001 npm start
 |496|[next-greater-element-i](https://oj.leetcode.com/problems/next-greater-element-i/)| [JavaScript](./problems/496-next-greater-element-i/index.js)|Easy|
 |513|[find-bottom-left-tree-value](https://oj.leetcode.com/problems/find-bottom-left-tree-value/)| [JavaScript](./problems/513-find-bottom-left-tree-value/index.js)|Medium|
 |485|[max-consecutive-ones](https://oj.leetcode.com/problems/max-consecutive-ones/)| [JavaScript](./problems/485-max-consecutive-ones/index.js)|Easy|
-|520|[detect-capital](https://oj.leetcode.com/problems/detect-capital/)| [JavaScript](./problems/520-detect-capital/index.js)|Easy||448|[find-all-numbers-disappeared-in-an-array](https://oj.leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)| [JavaScript](./problems/448-find-all-numbers-disappeared-in-an-array/index.js)|Easy|
-|442|[find-all-duplicates-in-an-array](https://oj.leetcode.com/problems/find-all-duplicates-in-an-array/)| [JavaScript](./problems/442-find-all-duplicates-in-an-array/index.js)|Medium|
-|258|[add-digits](https://oj.leetcode.com/problems/add-digits/)| [JavaScript](./problems/258-add-digits/index.js)|Easy|
-|495|[teemo-attacking](https://oj.leetcode.com/problems/teemo-attacking/)| [JavaScript](./problems/495-teemo-attacking/index.js)|Medium|
-|529|[minesweeper](https://oj.leetcode.com/problems/minesweeper/)| [JavaScript](./problems/529-minesweeper/index.js)|Medium|
+|520|[detect-capital](https://oj.leetcode.com/problems/detect-capital/)| [JavaScript](./problems/520-detect-capital/index.js)|Easy|
+|448|[find-all-numbers-disappeared-in-an-array](https://oj.leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)| [JavaScript](./problems/448-find-all-numbers-disappeared-in-an-array/index.js)|Easy|
+|442|[find-all-duplicates-in-an-array](https://oj.leetcode.com/problems/find-all-duplicates-in-an-array/)| [JavaScript](./problems/442-find-all-duplicates-in-an-array/index.js)|Medium|
+|258|[add-digits](https://oj.leetcode.com/problems/add-digits/)| [JavaScript](./problems/258-add-digits/index.js)|Easy|
+|495|[teemo-attacking](https://oj.leetcode.com/problems/teemo-attacking/)| [JavaScript](./problems/495-teemo-attacking/index.js)|Medium|
+|529|[minesweeper](https://oj.leetcode.com/problems/minesweeper/)| [JavaScript](./problems/529-minesweeper/index.js)|Medium|
