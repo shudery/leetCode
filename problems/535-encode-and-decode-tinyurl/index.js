@@ -17,15 +17,15 @@ var long = 'https://leetcode.com/problems/';
  * @param {string} longUrl
  * @return {string}
  */
-var encode = function(longUrl) {
+var encode = function (longUrl) {
     var str = longUrl.split(long)[1];
     var code = [];
     str.split('').forEach((v, i) => {
         code.push(v.charCodeAt());
     });
-    
-    return short + 
-        console.log(str);
+
+    // return short + 
+    //     console.log(str);
 };
 encode('https://leetcode.com/problems/abc-def');
 /**
@@ -34,7 +34,7 @@ encode('https://leetcode.com/problems/abc-def');
  * @param {string} shortUrl
  * @return {string}
  */
-var decode = function(shortUrl) {
+var decode = function (shortUrl) {
 
 };
 

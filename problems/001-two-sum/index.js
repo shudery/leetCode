@@ -11,7 +11,7 @@
  * @return {number[]}        [description]
  */
 
-console.log(twoSum1([2,7,11,15],9))
+// console.log(twoSum1([2,7,11,15],9))
 function twoSum1(nums, target) {
     let result = [];
     nums.forEach((value, index) => {
@@ -29,7 +29,7 @@ function twoSum2(nums, target) {
     var a = [];
     for (var i = 0, len = nums.length; i < len; i++) {
         var tmp = target - nums[i];
-        if (a[tmp] !== undefined) 
+        if (a[tmp] !== undefined)
             return [a[tmp], i];
         a[nums[i]] = i;
     }
