@@ -68,4 +68,5 @@ n=001 npm start
 | 258 | [add-digits](https://oj.leetcode.com/problems/add-digits/)                                                             | [JavaScript](./problems/258-add-digits/index.js)                               | Easy       |
 | 495 | [teemo-attacking](https://oj.leetcode.com/problems/teemo-attacking/)                                                   | [JavaScript](./problems/495-teemo-attacking/index.js)                          | Medium     |
 | 529 | [minesweeper](https://oj.leetcode.com/problems/minesweeper/)                                                           | [JavaScript](./problems/529-minesweeper/index.js)                              | Medium     |
-|002|[add-two-numbers](https://oj.leetcode.com/problems/add-two-numbers/)| [JavaScript](./problems/002-add-two-numbers/index.js)||
+
+|002|[add-two-numbers](https://oj.leetcode.com/problems/add-two-numbers/)| [JavaScript](./problems/002-add-two-numbers/index.js)| Medium |
