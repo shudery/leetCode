@@ -12,27 +12,44 @@
  */
 
 // console.log(twoSum1([2,7,11,15],9))
-function twoSum1(nums, target) {
-    let result = [];
-    nums.forEach((value, index) => {
-        let flag = target - value;
-        nums.forEach((val, i) => {
-            if (i !== index && val === flag) {
-                result = [index, i].sort((a, b) => a - b);
-            }
-        })
-    })
-    return result;
-}
+// function twoSum1(nums, target) {
+//     let result = [];
+//     nums.forEach((value, index) => {
+//         let flag = target - value;
+//         nums.forEach((val, i) => {
+//             if (i !== index && val === flag) {
+//                 result = [index, i].sort((a, b) => a - b);
+//             }
+//         })
+//     })
+//     return result;
+// }
 
-function twoSum2(nums, target) {
-    var a = [];
-    for (var i = 0, len = nums.length; i < len; i++) {
-        var tmp = target - nums[i];
-        if (a[tmp] !== undefined)
-            return [a[tmp], i];
-        a[nums[i]] = i;
+// function twoSum2(nums, target) {
+//     var a = [];
+//     for (var i = 0, len = nums.length; i < len; i++) {
+//         var tmp = target - nums[i];
+//         if (a[tmp] !== undefined)
+//             return [a[tmp], i];
+//         a[nums[i]] = i;
+//     }
+// };
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+  for (var i = 0; i < nums.length; i++) {
+    var first = nums[i];
+    for (var j = i + 1; j < nums.length; j++) {
+      var last = nums[j];
+      if (first + last === target) {
+        return [i, j];
+      }
     }
+  }
 };
 
-module.exports = [twoSum1, twoSum2];
+module.exports = [twoSum];
