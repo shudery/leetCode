@@ -15,7 +15,7 @@ echo "// Title  : ${title}" >> ./problems/${num}/index.js
 echo "// Date   :" `date +%F` >> ./problems/${num}/index.js
 echo "// Author : Daguo" >> ./problems/${num}/index.js
 echo "/*****************************************\n\n*****************************************/" >> ./problems/${num}/index.js
-echo "\n\nmodule.exports = null;" >> ./problems/${num}/index.js
+echo "\n\nmodule.exports = [null];" >> ./problems/${num}/index.js
 
 #cp ./problems/999-template/test.js ./problems/${num}/test.js
 echo "create test.js"

@@ -27,4 +27,4 @@ nums2 = [3, 4]
  * @return {number}
  */
 var findMedianSortedArrays = function(nums1, nums2) {};
-module.exports = [findMedianSortedArrays];
+module.exports = [null];

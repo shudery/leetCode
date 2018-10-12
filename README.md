@@ -58,3 +58,5 @@ n=001 npm start
 |529|[minesweeper](https://oj.leetcode.com/problems/minesweeper/)| [JavaScript](./problems/529-minesweeper/index.js)|Medium|
 |002|[add-two-numbers](https://oj.leetcode.com/problems/add-two-numbers/)| [JavaScript](./problems/002-add-two-numbers/index.js)|Medium||003|[longest-substring-without-repeating-characters](https://oj.leetcode.com/problems/longest-substring-without-repeating-characters/)| [JavaScript](./problems/003-longest-substring-without-repeating-characters/index.js)|Medium|
 |004|[median-of-two-sorted-arrays](https://oj.leetcode.com/problems/median-of-two-sorted-arrays/)| [JavaScript](./problems/004-median-of-two-sorted-arrays/index.js)|Hard|
+|209|[minimum-size-subarray-sum](https://oj.leetcode.com/problems/minimum-size-subarray-sum/)| [JavaScript](./problems/209-minimum-size-subarray-sum/index.js)|medium|
+|167|[two-sum-ii-input-array-is-sorted](https://oj.leetcode.com/problems/two-sum-ii-input-array-is-sorted/)| [JavaScript](./problems/167-two-sum-ii-input-array-is-sorted/index.js)|easy|

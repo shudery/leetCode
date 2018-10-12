@@ -52,4 +52,20 @@ var twoSum = function(nums, target) {
   }
 };
 
+// var twoSum = function(nums, target) {
+//   var number=[];
+//   var left = 0;
+//   var right = nums.length - 1 ;
+//   // 对撞的循环条件：左边指针小于右边指针
+//   while(left < right ) {
+//       if(nums[left] + nums[right] === target) {
+//           return [left, right]
+//       } else if(nums[left] + nums[right] > target ) {
+//           right--;
+//       } else {
+//           left++;
+//       }
+//   }
+// };
+
 module.exports = [twoSum];
