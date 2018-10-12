@@ -40,7 +40,7 @@ var minSubArrayLen = function(s, nums) {
 //
 var minSubArrayLen2 = function(s, nums) {
   var left = 0;
-  var right = -1; // right 的起始位置很重要，这里选择-1是因为刚开始的时候区间是没有值得
+  var right = 0;
   var tmpSum = 0;
   var minLength;
 
@@ -48,14 +48,14 @@ var minSubArrayLen2 = function(s, nums) {
   while (left < nums.length - 1) {
     if (tmpSum < s) {
       // 这里要注意边界的处理，当右指针移动到最后一个元素的时候结束
-      if (right >= nums.length - 1) {
+      if (right > nums.length - 1) {
         return minLength || 0;
       }
-      right++;
       // 这里tmpSum的计算也很巧妙，直接用累加的方式，节省计算量
       tmpSum = tmpSum + nums[right];
+      right++;
     } else {
-      var tmp = right - left + 1;
+      var tmp = right - left;
       if (minLength) {
         if (tmp < minLength) {
           minLength = tmp;
