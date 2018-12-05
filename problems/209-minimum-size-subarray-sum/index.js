@@ -14,12 +14,7 @@
 如果你已经完成了O(n) 时间复杂度的解法, 请尝试 O(n log n) 时间复杂度的解法。
 *****************************************/
 
-// 滑块解法
-/**
- * @param {number} s
- * @param {number[]} nums
- * @return {number}
- */
+// own 滑块解法 O(n*log(n))
 var minSubArrayLen = function(s, nums) {
   var len = nums.length;
   // 滑块长度循环
@@ -37,7 +32,7 @@ var minSubArrayLen = function(s, nums) {
   return 0;
 };
 
-//
+// O(n)
 var minSubArrayLen2 = function(s, nums) {
   var left = 0;
   var right = 0;
@@ -73,20 +68,21 @@ var minSubArrayLen2 = function(s, nums) {
   return minLength;
 };
 
-// 暴力解法
-var minSubArrayLen3 = function(s, nums) {
-  var len = 1;
-  while (len <= nums.length) {
-    for (var i = 0; i < nums.length; i++) {
-      var sum = 0;
-      for (var j = i; j < i + len; j++) {
-        sum += nums[j];
-      }
-      if (sum >= s) return len;
-    }
-    len++;
-  }
-  return 0;
-};
+// 简洁版：
+// int minSubArrayLen(int s, vector<int>& nums)
+// {
+//     int n = nums.size();
+//     int ans = INT_MAX;
+//     int left = 0;
+//     int sum = 0;
+//     for (int i = 0; i < n; i++) {
+//         sum += nums[i];
+//         while (sum >= s) {
+//             ans = min(ans, i + 1 - left);
+//             sum -= nums[left++];
+//         }
+//     }
+//     return (ans != INT_MAX) ? ans : 0;
+// }
 
 module.exports = [minSubArrayLen2];

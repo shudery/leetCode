@@ -22,5 +22,5 @@ echo "create test.js"
 echo "module.exports = [{\n\tinput: [5],\n\toutput: 5,\n},\n{\n\tinput: [[1,-5]],\n\toutput: -4,\n},\n]" >> ./problems/${num}/test.js
 
 # 在README文件中插入最新一题
-echo "\r|${n}|[${title}](https://oj.leetcode.com/problems/${title}/)| [JavaScript](./problems/${num}/index.js)|${level}|" >> README.md
+echo "|${n}|[${title}](https://oj.leetcode.com/problems/${title}/)| [JavaScript](./problems/${num}/index.js)|${level}|" >> README.md
 echo "add info to README.md."
