@@ -6,39 +6,43 @@
 
 ### 功能和性能测试
 
-安装依赖
+使用 mocha + chai + benchmark 来测试算法准确和性能。
 
-```
+#### 安装依赖
+
+```js
 npm install
 ```
 
-测试所有题目是否通过
+#### 测试所有题目
 
-```
+```js
 npm test
 ```
 
-测试单个题目是否通过，传入参数，如测试 001 题
+#### 测试单个题目
 
-```
+```js
+// 如测试题号001，需传入n=001
 n=001 npm test
 ```
 
-测试单个题目是否通过，并且测试不同方法执行时间
+#### 测试算法执行时间
 
-```
+```js
 n=001 npm start
 ```
 
-利用脚本一键生成新题目目录并插入到 README 文件中
+#### 新建题目
 
+自动生成新题目的文件目录，并在 readme 插入一条相关的信息。
+
+```shell
+./crepro.sh 999-template-test Easy
+# ./crepro.sh {题目序号}-{题目(-分隔单词)} {题目难度}
 ```
-./crepro.sh {题目序号}-{题目(-分隔单词)} {题目难度}
-```
 
-例如`./crepro.sh 999-template-test Easy`
-
-###LeetCode Algorithm
+### LeetCode Algorithm
 
 | #   | Title                                                                                                                              | Solution                                                                             | Difficulty |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ---------- |
@@ -73,3 +77,4 @@ n=001 npm start
 | 004 | [median-of-two-sorted-arrays](https://oj.leetcode.com/problems/median-of-two-sorted-arrays/)                                       | [JavaScript](./problems/004-median-of-two-sorted-arrays/index.js)                    | Hard       |
 | 209 | [minimum-size-subarray-sum](https://oj.leetcode.com/problems/minimum-size-subarray-sum/)                                           | [JavaScript](./problems/209-minimum-size-subarray-sum/index.js)                      | medium     |
 | 167 | [two-sum-ii-input-array-is-sorted](https://oj.leetcode.com/problems/two-sum-ii-input-array-is-sorted/)                             | [JavaScript](./problems/167-two-sum-ii-input-array-is-sorted/index.js)               | easy       |
+|019|[remove-nth-node-from-end-of-list](https://oj.leetcode.com/problems/remove-nth-node-from-end-of-list/)| [JavaScript](./problems/019-remove-nth-node-from-end-of-list/index.js)|medium|
