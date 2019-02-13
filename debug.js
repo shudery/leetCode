@@ -1,6 +1,6 @@
 var fs = require('fs');
 var path = require('path');
-var num = process.env.n || 20;
+var num = process.env.n || 24;
 
 var path = __dirname + '/problems';
 var problems = fs.readdirSync(path);

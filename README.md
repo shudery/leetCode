@@ -79,3 +79,4 @@ n=001 npm start
 | 167 | [two-sum-ii-input-array-is-sorted](https://oj.leetcode.com/problems/two-sum-ii-input-array-is-sorted/)                             | [JavaScript](./problems/167-two-sum-ii-input-array-is-sorted/index.js)               | easy       |
 |019|[remove-nth-node-from-end-of-list](https://oj.leetcode.com/problems/remove-nth-node-from-end-of-list/)| [JavaScript](./problems/019-remove-nth-node-from-end-of-list/index.js)|medium|
 |020|[valid-parentheses](https://oj.leetcode.com/problems/valid-parentheses/)| [JavaScript](./problems/020-valid-parentheses/index.js)|easy|
+|024|[swap-nodes-in-pairs](https://oj.leetcode.com/problems/swap-nodes-in-pairs/)| [JavaScript](./problems/024-swap-nodes-in-pairs/index.js)|medium|
