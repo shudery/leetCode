@@ -32,7 +32,11 @@ var removeNthFromEnd = function(head, n) {
   while (n--) {
     p2 = p2.next;
   }
-  while (p1) {
+  // 删除第一个节点的情况
+  if (!p2) {
+    return head.next;
+  }
+  while (1) {
     // 链表结尾
     if (!p2.next) {
       // 重新链接
@@ -45,4 +49,4 @@ var removeNthFromEnd = function(head, n) {
     }
   }
 };
-module.exports = [removeNthFromEnd];
+module.exports = [null];

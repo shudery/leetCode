@@ -78,3 +78,4 @@ n=001 npm start
 | 209 | [minimum-size-subarray-sum](https://oj.leetcode.com/problems/minimum-size-subarray-sum/)                                           | [JavaScript](./problems/209-minimum-size-subarray-sum/index.js)                      | medium     |
 | 167 | [two-sum-ii-input-array-is-sorted](https://oj.leetcode.com/problems/two-sum-ii-input-array-is-sorted/)                             | [JavaScript](./problems/167-two-sum-ii-input-array-is-sorted/index.js)               | easy       |
 |019|[remove-nth-node-from-end-of-list](https://oj.leetcode.com/problems/remove-nth-node-from-end-of-list/)| [JavaScript](./problems/019-remove-nth-node-from-end-of-list/index.js)|medium|
+|020|[valid-parentheses](https://oj.leetcode.com/problems/valid-parentheses/)| [JavaScript](./problems/020-valid-parentheses/index.js)|easy|
