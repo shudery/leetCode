@@ -81,3 +81,4 @@ n=001 npm start
 |020|[valid-parentheses](https://oj.leetcode.com/problems/valid-parentheses/)| [JavaScript](./problems/020-valid-parentheses/index.js)|easy|
 |024|[swap-nodes-in-pairs](https://oj.leetcode.com/problems/swap-nodes-in-pairs/)| [JavaScript](./problems/024-swap-nodes-in-pairs/index.js)|medium|
 |026|[remove-duplicates-from-sorted-array](https://oj.leetcode.com/problems/remove-duplicates-from-sorted-array/)| [JavaScript](./problems/026-remove-duplicates-from-sorted-array/index.js)|easy|
+|075|[sort-colors](https://oj.leetcode.com/problems/sort-colors/)| [JavaScript](./problems/075-sort-colors/index.js)|medium|

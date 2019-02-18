@@ -37,6 +37,9 @@ for (int i = 0; i < len; i++) {
     print(nums[i]);
 }
 *****************************************/
+
+// 注意要保留数组中多余的元素
+
 /**
  * @param {number[]} nums
  * @return {number}
