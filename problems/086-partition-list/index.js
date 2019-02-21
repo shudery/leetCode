@@ -49,4 +49,4 @@ var partition = function(head, x) {
   h1.next = s2.next;
   return s1.next;
 };
-module.exports = [null];
+module.exports = [partition];
