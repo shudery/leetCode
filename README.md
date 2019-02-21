@@ -4,6 +4,16 @@
 
 没事刷刷算法题： [leetcode](https://leetcode.com/problemset/algorithms/)
 
+### 优势
+
+使用本项目在本地环境刷 OJ 题目有如下好处：
+
+- 更习惯，使用自己平时开发写代码的编辑器/IDE。
+- 更高效和规范，可以有语法提示和自动格式化
+- 容易调试，本地断点调试方便
+- 本地测试用例，方便快速测试多个用例，避免在 OJ 平台多次错误提交
+- 可离线做题，将做题记录同步到 git
+
 ### 功能和性能测试
 
 使用 mocha + chai + benchmark 来测试算法准确和性能。
@@ -77,9 +87,9 @@ n=001 npm start
 | 004 | [median-of-two-sorted-arrays](https://oj.leetcode.com/problems/median-of-two-sorted-arrays/)                                       | [JavaScript](./problems/004-median-of-two-sorted-arrays/index.js)                    | Hard       |
 | 209 | [minimum-size-subarray-sum](https://oj.leetcode.com/problems/minimum-size-subarray-sum/)                                           | [JavaScript](./problems/209-minimum-size-subarray-sum/index.js)                      | medium     |
 | 167 | [two-sum-ii-input-array-is-sorted](https://oj.leetcode.com/problems/two-sum-ii-input-array-is-sorted/)                             | [JavaScript](./problems/167-two-sum-ii-input-array-is-sorted/index.js)               | easy       |
-|019|[remove-nth-node-from-end-of-list](https://oj.leetcode.com/problems/remove-nth-node-from-end-of-list/)| [JavaScript](./problems/019-remove-nth-node-from-end-of-list/index.js)|medium|
-|020|[valid-parentheses](https://oj.leetcode.com/problems/valid-parentheses/)| [JavaScript](./problems/020-valid-parentheses/index.js)|easy|
-|024|[swap-nodes-in-pairs](https://oj.leetcode.com/problems/swap-nodes-in-pairs/)| [JavaScript](./problems/024-swap-nodes-in-pairs/index.js)|medium|
-|026|[remove-duplicates-from-sorted-array](https://oj.leetcode.com/problems/remove-duplicates-from-sorted-array/)| [JavaScript](./problems/026-remove-duplicates-from-sorted-array/index.js)|easy|
-|075|[sort-colors](https://oj.leetcode.com/problems/sort-colors/)| [JavaScript](./problems/075-sort-colors/index.js)|medium|
-|086|[partition-list](https://oj.leetcode.com/problems/partition-list/)| [JavaScript](./problems/086-partition-list/index.js)|medium|
+| 019 | [remove-nth-node-from-end-of-list](https://oj.leetcode.com/problems/remove-nth-node-from-end-of-list/)                             | [JavaScript](./problems/019-remove-nth-node-from-end-of-list/index.js)               | medium     |
+| 020 | [valid-parentheses](https://oj.leetcode.com/problems/valid-parentheses/)                                                           | [JavaScript](./problems/020-valid-parentheses/index.js)                              | easy       |
+| 024 | [swap-nodes-in-pairs](https://oj.leetcode.com/problems/swap-nodes-in-pairs/)                                                       | [JavaScript](./problems/024-swap-nodes-in-pairs/index.js)                            | medium     |
+| 026 | [remove-duplicates-from-sorted-array](https://oj.leetcode.com/problems/remove-duplicates-from-sorted-array/)                       | [JavaScript](./problems/026-remove-duplicates-from-sorted-array/index.js)            | easy       |
+| 075 | [sort-colors](https://oj.leetcode.com/problems/sort-colors/)                                                                       | [JavaScript](./problems/075-sort-colors/index.js)                                    | medium     |
+| 086 | [partition-list](https://oj.leetcode.com/problems/partition-list/)                                                                 | [JavaScript](./problems/086-partition-list/index.js)                                 | medium     |
