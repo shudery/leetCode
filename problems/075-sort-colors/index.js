@@ -43,10 +43,10 @@ var sortColors = function(nums) {
   return nums;
 };
 
-//  1// 三路快速排序的思想
-//  2// 对整个数组只遍历了一遍
-//  3// 时间复杂度: O(n)
-//  4// 空间复杂度: O(1)
+// 三路快速排序的思想
+// 对整个数组只遍历了一遍
+// 时间复杂度: O(n)
+// 空间复杂度: O(1)
 var sortColors = function(nums) {
   let min = -1;
   let max = nums.length;
@@ -65,28 +65,4 @@ var sortColors = function(nums) {
   return nums;
 };
 
-//  1// 三路快速排序的思想
-//  2// 对整个数组只遍历了一遍
-//  3// 时间复杂度: O(n)
-//  4// 空间复杂度: O(1)
-//  5class Solution {
-//   6public:
-//   7    void sortColors(vector<int> &nums) {
-//   8
-//   9        int zero = -1;          // [0...zero] == 0
-//  10        int two = nums.size();  // [two...n-1] == 2
-//  11        for(int i = 0 ; i < two ; ){
-//  12            if(nums[i] == 1){
-//  13                 i ++;
-//  14            }else if (nums[i] == 2){
-//  15                 two--;
-//  16                 swap( nums[i] , nums[two]);
-//  17            }else{ // nums[i] == 0
-//  18                 zero++;
-//  19                 swap(nums[zero] , nums[i]);
-//  20                 i++;
-//  21            }
-//  22        }
-//  23    }
-//  24};
 module.exports = [sortColors];
