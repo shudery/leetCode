@@ -37,7 +37,6 @@ var partition = function(head, x) {
       h1.next = head;
       head = head.next;
       h1 = h1.next;
-      // 不置null会超出内存
       h1.next = null;
     } else {
       h2.next = head;
@@ -46,6 +45,7 @@ var partition = function(head, x) {
       h2.next = null;
     }
   }
+  // 前面最后一个结点需要置null，不然会导致最后一位循环引用
   h1.next = s2.next;
   return s1.next;
 };
