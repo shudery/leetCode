@@ -94,3 +94,4 @@ n=001 npm start
 | 075 | [sort-colors](https://oj.leetcode.com/problems/sort-colors/)                                                                       | [JavaScript](./problems/075-sort-colors/index.js)                                    | medium     |
 | 086 | [partition-list](https://oj.leetcode.com/problems/partition-list/)                                                                 | [JavaScript](./problems/086-partition-list/index.js)                                 | medium     |
 |092|[reverse-linked-list-ii](https://oj.leetcode.com/problems/reverse-linked-list-ii/)| [JavaScript](./problems/092-reverse-linked-list-ii/index.js)|medium|
+|094|[binary-tree-inorder-traversal](https://oj.leetcode.com/problems/binary-tree-inorder-traversal/)| [JavaScript](./problems/094-binary-tree-inorder-traversal/index.js)|medium|
