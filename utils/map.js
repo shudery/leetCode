@@ -13,4 +13,31 @@ function mapLinks(arr) {
   return result.next;
 }
 
+/**
+ * 数组 -> 二叉树
+ * [1,"2",null,null,3,4,5]
+ *
+ * ->
+ * [
+ *  [1]
+ *  ["2",null]
+ *  [null,3,null,null]
+ *  [null,null,4,5,null,null,null,null]
+ * ]
+ *      1
+ *    2
+ *      3
+ *     4 5
+ */
+function mapTree(array) {
+  const result = [];
+  let arr = array;
+  let size = 1;
+  while (arr.length) {
+    let res = [];
+    while (size--) {
+      res.push(arr.shift());
+    }
+  }
+}
 module.exports = { mapLinks };

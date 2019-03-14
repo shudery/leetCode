@@ -28,25 +28,25 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
+// 迭代
 var inorderTraversal = function(root) {
-  let arr = [];
-  let left = root.left;
-  while (left) {
-    left = left.left;
+  if (!root) return [];
+  let stack = [];
+  let result = [];
+  let cur = root;
+  while (cur || stack.length) {
+    if (cur) {
+      stack.push(cur);
+      cur = cur.left;
+    } else {
+      cur = stack.pop();
+      result.push(cur.val);
+      cur = cur.right;
+    }
   }
-  return arr;
+  return result;
 };
-// var inorderTraversal = function(root) {
-//   let arr = [];
-//   var find = (node) => {
-//     if (!node) return;
-//     if (node.left) find(node.left);
-//     arr.push(node.val);
-//     if (node.right) find(node.right);
-//   };
-//   find(root);
-//   return arr;
-// };
+// 递归
 var inorderTraversal = function(root) {
   var find = node =>
     node ? [...find(node.left), node.val, ...find(node.right)] : [];
