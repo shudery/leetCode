@@ -33,7 +33,7 @@ function mapLinks(arr) {
 function mapTree(array) {
   // 一维数组按层级转为二维数组
   let arr = [array.shift()];
-  const result = [arr.map(v => ({ val: v }))];
+  const result = [arr.map(v => (v === null ? null : { val: v }))];
   while (array.length) {
     let nextArr = [];
     arr.forEach(v => {
@@ -41,20 +41,21 @@ function mapTree(array) {
       else nextArr = [...nextArr, null, null];
     });
     arr = nextArr;
-    result.push(arr.map(v => ({ val: v })));
+    result.push(arr.map(v => (v === null ? null : { val: v })));
   }
   // 转换二维数组为树结构
   let d;
   const root = result[0][0];
   // 取当前层数组，与下一层级连接起来
-  while ((d = result.shift()) && result[0]) {
+  while ((d = result.shift())) {
     let i = 0;
     d.forEach(v => {
       // null结点没有子节点，但数组中仍存有占位符，i需要累加2
-      if (v.val === null) i += 2;
+      if (v === null) i += 2;
       else {
-        v.left = result[0][i++];
-        v.right = result[0][i++];
+        // 到达叶子节点，左右节点设置为null
+        v.left = result[0] ? result[0][i++] : null;
+        v.right = result[0] ? result[0][i++] : null;
       }
     });
   }

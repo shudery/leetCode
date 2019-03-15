@@ -41,7 +41,7 @@ var levelOrder = function(root) {
     let arr = [];
     // 存放每一层的节点值
     let res = [];
-    stack.forEach((v, i) => {
+    stack.forEach(v => {
       if (v.val || v.val === 0) res.push(v.val);
       if (v.left) arr.push(v.left);
       if (v.right) arr.push(v.right);
@@ -52,4 +52,4 @@ var levelOrder = function(root) {
   return result;
 };
 
-module.exports = [null];
+module.exports = [levelOrder];

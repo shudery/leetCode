@@ -47,10 +47,10 @@ var inorderTraversal = function(root) {
   return result;
 };
 // 递归
-var inorderTraversal = function(root) {
+var inorderTraversal2 = function(root) {
   var find = node =>
     node ? [...find(node.left), node.val, ...find(node.right)] : [];
   return find(root);
 };
 
-module.exports = [null];
+module.exports = [inorderTraversal, inorderTraversal2];

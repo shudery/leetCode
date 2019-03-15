@@ -24,23 +24,21 @@
 npm install
 ```
 
+#### 测试单个题目
+
+```js
+// 测试题号001，传入n=001，返回测试结果
+n=001 npm test
+// 返回测试结果，包括算法性能
+n=001 npm perf
+```
+
 #### 测试所有题目
 
 ```js
 npm test
-```
-
-#### 测试单个题目
-
-```js
-// 如测试题号001，需传入n=001
-n=001 npm test
-```
-
-#### 测试算法执行时间
-
-```js
-n=001 npm start
+// 测试是否通过并且计算所有算法的性能，比较耗时
+npm perf
 ```
 
 #### 新建题目
@@ -95,4 +93,4 @@ n=001 npm start
 | 086 | [partition-list](https://oj.leetcode.com/problems/partition-list/)                                                                 | [JavaScript](./problems/086-partition-list/index.js)                                 | medium     |
 | 092 | [reverse-linked-list-ii](https://oj.leetcode.com/problems/reverse-linked-list-ii/)                                                 | [JavaScript](./problems/092-reverse-linked-list-ii/index.js)                         | medium     |
 | 094 | [binary-tree-inorder-traversal](https://oj.leetcode.com/problems/binary-tree-inorder-traversal/)                                   | [JavaScript](./problems/094-binary-tree-inorder-traversal/index.js)                  | medium     |
-|102|[binary-tree-level-order-traversal](https://oj.leetcode.com/problems/binary-tree-level-order-traversal/)| [JavaScript](./problems/102-binary-tree-level-order-traversal/index.js)|medium|
+| 102 | [binary-tree-level-order-traversal](https://oj.leetcode.com/problems/binary-tree-level-order-traversal/)                           | [JavaScript](./problems/102-binary-tree-level-order-traversal/index.js)              | medium     |
