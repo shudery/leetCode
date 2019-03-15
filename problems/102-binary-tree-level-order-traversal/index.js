@@ -32,24 +32,39 @@
  * @param {TreeNode} root
  * @return {number[][]}
  */
+// 循环，队列
 var levelOrder = function(root) {
-  if (!root) return [];
+  if (root === null) return [];
   // 存放每一层的节点
-  let stack = [root];
+  let queue = [root];
   let result = [];
-  while (stack.length) {
-    let arr = [];
+  while (queue.length) {
+    let cur = [];
     // 存放每一层的节点值
-    let res = [];
-    stack.forEach(v => {
-      if (v.val || v.val === 0) res.push(v.val);
-      if (v.left) arr.push(v.left);
-      if (v.right) arr.push(v.right);
+    let values = [];
+    queue.forEach(v => {
+      if (v.val !== null) values.push(v.val);
+      if (v.left) cur.push(v.left);
+      if (v.right) cur.push(v.right);
     });
-    result.push(res);
-    stack = arr;
+    result.push(values);
+    queue = cur;
   }
   return result;
 };
 
-module.exports = [levelOrder];
+// 递归，左树一定比右树先存储，保证了顺序
+var levelOrder2 = function(root) {
+  let result = [];
+  const find = (root, depth, res) => {
+    if (!root) return;
+    if (depth >= res.length) res.push([]);
+    res[depth].push(root.val);
+    find(root.left, depth + 1, res);
+    find(root.right, depth + 1, res);
+  };
+  find(root, 0, result);
+  return result;
+};
+
+module.exports = [levelOrder, levelOrder2];
