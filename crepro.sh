@@ -19,7 +19,7 @@ echo "\n\nmodule.exports = [null];" >> ./problems/${num}/index.js
 
 #cp ./problems/999-template/test.js ./problems/${num}/test.js
 echo "create test.js"
-echo "module.exports = [{\n\tinput: [5],\n\toutput: 5,\n},\n{\n\tinput: [[1,-5]],\n\toutput: -4,\n},\n]" >> ./problems/${num}/test.js
+echo "module.exports = [{\n\tinput: [5],\n\toutput: 5,\n}]" >> ./problems/${num}/test.js
 
 # 在README文件中插入最新一题
 echo "|${n}|[${title}](https://oj.leetcode.com/problems/${title}/)| [JavaScript](./problems/${num}/index.js)|${level}|" >> README.md
