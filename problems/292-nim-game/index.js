@@ -12,12 +12,10 @@ If there are 5 stones in the heap, could you figure out a way to remove the ston
  * @return {boolean}
  */
 var canWinNim = function(n) {
-
-    if (n % 4 !== 0) {
-        return true
-    }
-    return false;
+  if (n % 4 !== 0) {
+    return true;
+  }
+  return false;
 };
 
-
-module.exports = canWinNim;
+module.exports = [canWinNim];

@@ -24,13 +24,14 @@ Note: The input will be a non-empty word consisting of uppercase and lowercase l
  * @return {boolean}
  */
 var detectCapitalUse = function(word) {
-    //将字符串转化为一个对应编码值的数组，codePointAt
-    var strArr = word.split('').map(v => v.charCodeAt());
-    var firstLetter = strArr.splice(0, 1);
-    //首字母为大写
-    return firstLetter >= 65 && firstLetter <= 90
-        //除了首字母，都为大写或者都为小写均可以
-        ? strArr.every(v => v >= 65 && v <= 90) || strArr.every(v => v >= 97 && v <= 122) 
-        : strArr.every(v => v >= 97 && v <= 122);
+  //将字符串转化为一个对应编码值的数组，codePointAt
+  var strArr = word.split('').map(v => v.charCodeAt());
+  var firstLetter = strArr.splice(0, 1);
+  //首字母为大写
+  return firstLetter >= 65 && firstLetter <= 90
+    ? //除了首字母，都为大写或者都为小写均可以
+      strArr.every(v => v >= 65 && v <= 90) ||
+        strArr.every(v => v >= 97 && v <= 122)
+    : strArr.every(v => v >= 97 && v <= 122);
 };
-module.exports = detectCapitalUse;
+module.exports = [detectCapitalUse];

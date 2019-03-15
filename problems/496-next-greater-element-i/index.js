@@ -30,12 +30,11 @@ The length of both nums1 and nums2 would not exceed 1000.
  * @return {number[]}
  */
 
-module.exports = nextGreaterElement = function(findNums, nums) {
-
-    return findNums.map((v, index) => {
-        for (let i = nums.indexOf(v) + 1; i < nums.length; i++)
-            if (nums[i] > v)
-                return nums[i];
-        return -1;
-    })
-};;
+function nextGreaterElement(findNums, nums) {
+  return findNums.map((v, index) => {
+    for (let i = nums.indexOf(v) + 1; i < nums.length; i++)
+      if (nums[i] > v) return nums[i];
+    return -1;
+  });
+}
+module.exports = [nextGreaterElement];

@@ -1,34 +1,42 @@
 var fs = require('fs');
 var path = require('path');
-var num = process.env.n || 24;
+var colors = require('colors');
 
 var path = __dirname + '/problems';
 var problems = fs.readdirSync(path);
 
+// var num = process.env.n || 24;
 //匹配对应题目
-let reg = new RegExp(num);
-let problem = '';
-for (let i = 0; i < problems.length; i++) {
-  if (reg.test(problems[i])) {
-    problem = problems[i];
-    break;
-  }
-}
+// let reg = new RegExp(num);
+// let problem = '';
+// for (let i = 0; i < problems.length; i++) {
+//   if (reg.test(problems[i])) {
+//     problem = problems[i];
+//     break;
+//   }
+// }
 
-let fns = require('./problems/' + problem + '/index.js')[0];
-if (Object.prototype.toString.call(fns) === '[object Array') fns = fns[0];
-let demos = require('./problems/' + problem + '/test.js');
-
-demos.forEach((v, i) => {
-  let result = fns.apply(null, v.input);
-  let desc = `demo ${i} pass`;
-  if (typeof v.output === 'object') {
-    let want = JSON.stringify(v.output);
-    if (want !== JSON.stringify(result))
-      desc = `demo ${i} error: ${want} !== ${JSON.stringify(result)}`;
-  } else {
-    if (v.output !== result)
-      desc = `demo ${i} error: ${v.output} !== ${result}`;
-  }
-  console.log(desc);
+problems.forEach(problem => {
+  console.log(problem.yellow);
+  let fns = require('./problems/' + problem + '/index.js');
+  if (Object.prototype.toString.call(fns) === '[object Array') fns = fns[0];
+  const demos = require('./problems/' + problem + '/test.js');
+  fns.forEach((fn, n) => {
+    console.log(`name: ${fn ? fn.name : 'null'.red}`);
+    demos.forEach((v, i) => {
+      if (!fn) return;
+      const result = fn.apply(null, v.input);
+      let desc = `input ${i} exec result: pass`.green;
+      if (typeof v.output === 'object') {
+        let want = JSON.stringify(v.output);
+        if (want !== JSON.stringify(result))
+          desc = `input ${i} exec result: ${want} !== ${JSON.stringify(result)}`
+            .red;
+      } else {
+        if (v.output !== result)
+          desc = `input ${i} exec result: ${v.output} !== ${result}`.red;
+      }
+      console.log(desc);
+    });
+  });
 });

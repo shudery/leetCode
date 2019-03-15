@@ -62,7 +62,6 @@ var zigzagLevelOrder2 = function(root) {
     if (!root) return;
     if (depth >= res.length) res.push([]);
     depth % 2 === 0 ? res[depth].push(root.val) : res[depth].unshift(root.val);
-
     find(root.left, depth + 1, res);
     find(root.right, depth + 1, res);
   };

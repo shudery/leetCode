@@ -35,47 +35,49 @@ Output:
  * @return {character[][]}
  */
 var updateBoard = function(board, click) {
-    let row = click[0];
-    let col = click[1];
-    //点到雷爆炸
-    if (board[row][col] == 'M') {
-        board[row][col] = 'X';
-        return board;
-    }
-    //不是E不能点
-    if (board[row][col] != 'E')
-        return board;
-    
-    //记录递归查雷时，已经查过的点
-    let checked = [];
-
-    let find = function(row, col) {
-        let count = 0;
-        //检测周围九宫格，检测边界
-        for (let i = col - 1; i <= col + 1; i++)
-            if (0 <= i && i < board[0].length)
-                for (let j = row - 1; j <= row + 1; j++)
-                    if (j >= 0 && j < board.length && board[j][i] == 'M')
-                        count++;
-
-        if (count != 0) {
-            //找到雷的信息就停止迭代，修改该点信息
-            board[row][col] = '' + count;
-        } else {
-            //无雷的信息，将该点记为B
-            board[row][col] = 'B';
-            //记录上层递归的位置，防止重复查雷
-            checked.push(row + '-' + col);
-
-            //向周围九宫格格扩展递归找雷，检测边界和已查数组checked
-            for (let i = col - 1; i <= col + 1; i++)
-                if (0 <= i && i < board[0].length)
-                    for (let j = row - 1; j <= row + 1; j++)
-                        if (j >= 0 && j < board.length && checked.indexOf(j + '-' + i) == -1)
-                            find(j, i);
-        }
-    }
-    find(row, col);
+  let row = click[0];
+  let col = click[1];
+  //点到雷爆炸
+  if (board[row][col] == 'M') {
+    board[row][col] = 'X';
     return board;
+  }
+  //不是E不能点
+  if (board[row][col] != 'E') return board;
+
+  //记录递归查雷时，已经查过的点
+  let checked = [];
+
+  let find = function(row, col) {
+    let count = 0;
+    //检测周围九宫格，检测边界
+    for (let i = col - 1; i <= col + 1; i++)
+      if (0 <= i && i < board[0].length)
+        for (let j = row - 1; j <= row + 1; j++)
+          if (j >= 0 && j < board.length && board[j][i] == 'M') count++;
+
+    if (count != 0) {
+      //找到雷的信息就停止迭代，修改该点信息
+      board[row][col] = '' + count;
+    } else {
+      //无雷的信息，将该点记为B
+      board[row][col] = 'B';
+      //记录上层递归的位置，防止重复查雷
+      checked.push(row + '-' + col);
+
+      //向周围九宫格格扩展递归找雷，检测边界和已查数组checked
+      for (let i = col - 1; i <= col + 1; i++)
+        if (0 <= i && i < board[0].length)
+          for (let j = row - 1; j <= row + 1; j++)
+            if (
+              j >= 0 &&
+              j < board.length &&
+              checked.indexOf(j + '-' + i) == -1
+            )
+              find(j, i);
+    }
+  };
+  find(row, col);
+  return board;
 };
-module.exports = updateBoard;
+module.exports = [updateBoard];

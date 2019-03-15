@@ -19,10 +19,12 @@ The length of input array is a positive integer and will not exceed 10,000
  * @return {number}
  */
 var findMaxConsecutiveOnes = function(nums) {
-    //匹配所有带1的片段
-    var strArr = nums.join('').match(/(1)\1*/g);
-    //提取长度最长的带1片段
-    return strArr ? (strArr.reduce((pre, cur) => pre.length < cur.length ? cur : pre)).length : 0;
+  //匹配所有带1的片段
+  var strArr = nums.join('').match(/(1)\1*/g);
+  //提取长度最长的带1片段
+  return strArr
+    ? strArr.reduce((pre, cur) => (pre.length < cur.length ? cur : pre)).length
+    : 0;
 };
 
-module.exports = findMaxConsecutiveOnes;
+module.exports = [findMaxConsecutiveOnes];

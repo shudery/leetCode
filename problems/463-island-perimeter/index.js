@@ -19,35 +19,35 @@ Explanation: The perimeter is the 16 yellow stripes in the image below:
  * @return {number}
  */
 function islandPerimeter(grid) {
-    let count = 0;
-    for (let i = 0; i < grid.length; i++) {
-        for (let j = 0; j < grid[0].length; j++) {
-            let val = grid[i][j];
-            if (val) {
-                if (grid[i][j - 1] === undefined) {
-                    count++;
-                } else if (grid[i][j - 1] == 0) {
-                    count++;
-                };
-                if (grid[i][j + 1] === undefined) {
-                    count++;
-                } else if (grid[i][j + 1] == 0) {
-                    count++;
-                };
-                if (grid[i - 1] === undefined) {
-                    count++;
-                } else if (grid[i - 1][j] == 0) {
-                    count++;
-                };
-                if (grid[i + 1] === undefined) {
-                    count++;
-                } else if (grid[i + 1][j] == 0) {
-                    count++;
-                }
-                // console.log(i + ';' + j + '----' + count + ';' + grid[i][j - 1])
-            }
+  let count = 0;
+  for (let i = 0; i < grid.length; i++) {
+    for (let j = 0; j < grid[0].length; j++) {
+      let val = grid[i][j];
+      if (val) {
+        if (grid[i][j - 1] === undefined) {
+          count++;
+        } else if (grid[i][j - 1] == 0) {
+          count++;
         }
+        if (grid[i][j + 1] === undefined) {
+          count++;
+        } else if (grid[i][j + 1] == 0) {
+          count++;
+        }
+        if (grid[i - 1] === undefined) {
+          count++;
+        } else if (grid[i - 1][j] == 0) {
+          count++;
+        }
+        if (grid[i + 1] === undefined) {
+          count++;
+        } else if (grid[i + 1][j] == 0) {
+          count++;
+        }
+        // console.log(i + ';' + j + '----' + count + ';' + grid[i][j - 1])
+      }
     }
-    return count;
-};
-module.exports = islandPerimeter;
+  }
+  return count;
+}
+module.exports = [islandPerimeter];

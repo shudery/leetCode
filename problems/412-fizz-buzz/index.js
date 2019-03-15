@@ -33,22 +33,21 @@ Return:
  * @return {number[]}
  */
 function main(n) {
-    let arr = [];
-    for (let i = 1; i <= n; i++) {
-        let val = '';
-        if (i % 3 === 0) {
-            val += 'Fizz';
-        }
-        if (i % 5 === 0) {
-            val += 'Buzz'
-        }
-        if (!val) {
-            val += i
-        }
-        arr.push(val);
+  let arr = [];
+  for (let i = 1; i <= n; i++) {
+    let val = '';
+    if (i % 3 === 0) {
+      val += 'Fizz';
     }
-    return arr;
-};
+    if (i % 5 === 0) {
+      val += 'Buzz';
+    }
+    if (!val) {
+      val += i;
+    }
+    arr.push(val);
+  }
+  return arr;
+}
 
-
-module.exports = main;
+module.exports = [main];

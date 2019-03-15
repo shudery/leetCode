@@ -9,7 +9,7 @@
   "scripts": {
     "test": "mocha problems.test.js",
     "perf": "mocha problems.test.js && node perform.test.js",
-    "debug": "mocha --inspect-brk problems.test.js"
+    "debug": "node debug.js"
   },
   "repository": {
     "type": "git",

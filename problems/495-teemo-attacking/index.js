@@ -33,18 +33,17 @@ You may assume the numbers in the Teemo's attacking time series and his poisonin
  * @return {number}
  */
 var findPoisonedDuration = function(timeSeries, duration) {
-	//无攻击
-    if(!timeSeries.length)
-    	return 0;
+  //无攻击
+  if (!timeSeries.length) return 0;
 
-    var ans = duration;
-    timeSeries.reduce((pre,cur)=>{
-    	//差值大于持续时间，则中毒状态等于持续时间
-    	let diff = cur - pre;
-    	ans += diff >= duration ? duration : diff;
-    	return cur;
-    })
-    return ans;
+  var ans = duration;
+  timeSeries.reduce((pre, cur) => {
+    //差值大于持续时间，则中毒状态等于持续时间
+    let diff = cur - pre;
+    ans += diff >= duration ? duration : diff;
+    return cur;
+  });
+  return ans;
 };
 
-module.exports = findPoisonedDuration;
+module.exports = [findPoisonedDuration];

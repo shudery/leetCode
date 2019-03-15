@@ -41,6 +41,12 @@ npm test
 npm perf
 ```
 
+#### 本地断点调试
+
+```js
+npm run debug
+```
+
 #### 新建题目
 
 自动生成新题目的文件目录，并在 readme 插入一条相关的信息。
@@ -95,3 +101,4 @@ npm perf
 | 094 | [binary-tree-inorder-traversal](https://oj.leetcode.com/problems/binary-tree-inorder-traversal/)                                   | [JavaScript](./problems/094-binary-tree-inorder-traversal/index.js)                  | medium     |
 | 102 | [binary-tree-level-order-traversal](https://oj.leetcode.com/problems/binary-tree-level-order-traversal/)                           | [JavaScript](./problems/102-binary-tree-level-order-traversal/index.js)              | medium     |
 | 103 | [binary-tree-zigzag-level-order-traversal/](https://oj.leetcode.com/problems/binary-tree-zigzag-level-order-traversal//)           | [JavaScript](./problems/103-binary-tree-zigzag-level-order-traversal//index.js)      | medium     |
+| 107 | [binary-tree-level-order-traversal-ii](https://oj.leetcode.com/problems/binary-tree-level-order-traversal-ii/)                     | [JavaScript](./problems/107-binary-tree-level-order-traversal-ii/index.js)           | easy       |

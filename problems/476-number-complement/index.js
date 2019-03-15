@@ -21,9 +21,9 @@ Explanation: The binary representation of 1 is 1 (no leading zero bits), and its
  * @return {number}
  */
 var findComplement = function(num) {
-    var len = num.toString(2).length;
-    var n = Math.pow(2,len)-1;
-    return num ^ n;
+  var len = num.toString(2).length;
+  var n = Math.pow(2, len) - 1;
+  return num ^ n;
 };
 
-module.exports = findComplement;
+module.exports = [findComplement];
