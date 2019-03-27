@@ -1,7 +1,8 @@
 var Benchmark = require('benchmark');
+var colors = require('colors');
 var fs = require('fs');
 var _ = require('daguo');
-
+var suite = new Benchmark.Suite();
 var num = process.env.n || 001;
 
 var path = './problems';

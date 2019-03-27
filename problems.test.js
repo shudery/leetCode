@@ -36,7 +36,7 @@ function test(problem) {
     fns.push(fn);
   }
   //开始测试
-  describe(('test-problem:' + problem).yellow, function() {
+  describe('test-problem:' + problem, function() {
     //每个函数测试
     fns.forEach((fn, index) => {
       //每个输入例子测试

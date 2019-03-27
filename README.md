@@ -30,7 +30,7 @@ npm install
 // 测试题号001，传入n=001，返回测试结果
 n=001 npm test
 // 返回测试结果，包括算法性能
-n=001 npm perf
+n=001 npm run perf
 ```
 
 #### 测试所有题目
@@ -38,7 +38,7 @@ n=001 npm perf
 ```js
 npm test
 // 测试是否通过并且计算所有算法的性能，比较耗时
-npm perf
+npm run perf
 ```
 
 #### 本地断点调试
@@ -102,3 +102,4 @@ npm run debug
 | 102 | [binary-tree-level-order-traversal](https://oj.leetcode.com/problems/binary-tree-level-order-traversal/)                           | [JavaScript](./problems/102-binary-tree-level-order-traversal/index.js)              | medium     |
 | 103 | [binary-tree-zigzag-level-order-traversal/](https://oj.leetcode.com/problems/binary-tree-zigzag-level-order-traversal//)           | [JavaScript](./problems/103-binary-tree-zigzag-level-order-traversal//index.js)      | medium     |
 | 107 | [binary-tree-level-order-traversal-ii](https://oj.leetcode.com/problems/binary-tree-level-order-traversal-ii/)                     | [JavaScript](./problems/107-binary-tree-level-order-traversal-ii/index.js)           | easy       |
+| 144 | [binary-tree-preorder-traversal](https://oj.leetcode.com/problems/binary-tree-preorder-traversal/)                                 | [JavaScript](./problems/144-binary-tree-preorder-traversal/index.js)                 | medium     |
