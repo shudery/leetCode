@@ -103,3 +103,4 @@ npm run debug
 | 103 | [binary-tree-zigzag-level-order-traversal/](https://oj.leetcode.com/problems/binary-tree-zigzag-level-order-traversal//)           | [JavaScript](./problems/103-binary-tree-zigzag-level-order-traversal//index.js)      | medium     |
 | 107 | [binary-tree-level-order-traversal-ii](https://oj.leetcode.com/problems/binary-tree-level-order-traversal-ii/)                     | [JavaScript](./problems/107-binary-tree-level-order-traversal-ii/index.js)           | easy       |
 | 144 | [binary-tree-preorder-traversal](https://oj.leetcode.com/problems/binary-tree-preorder-traversal/)                                 | [JavaScript](./problems/144-binary-tree-preorder-traversal/index.js)                 | medium     |
+|145|[binary-tree-postorder-traversal](https://oj.leetcode.com/problems/binary-tree-postorder-traversal/)| [JavaScript](./problems/145-binary-tree-postorder-traversal/index.js)|hard|
