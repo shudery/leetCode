@@ -43,10 +43,13 @@ var preorderTraversal2 = function(root) {
   while (cur || stack.length) {
     if (cur) {
       stack.push(cur);
+      // 前序
       result.push(cur.val);
       cur = cur.left;
     } else {
       cur = stack.pop();
+      // 中序
+      // result.push(cur.val);
       cur = cur.right;
     }
   }

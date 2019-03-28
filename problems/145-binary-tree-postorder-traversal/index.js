@@ -37,33 +37,31 @@ var postorderTraversal = function(root) {
 
 // 迭代
 var postorderTraversal2 = function(root) {
+  // 空树直接返回
   if (!root) return [];
+  // 用一个栈来保存迭代的结点
   let stack = [];
+  // 保存排序结果
   let result = [];
+  // 从根节点开始迭代
   let cur = root;
+  // 节点存在 或者 栈中还有未处理节点
   while (cur || stack.length) {
-    // if (cur) {
-    //   stack.push(cur);
-    //   // 前序
-    //   // result.push(cur.val);
-    //   cur = cur.left;
-    // } else {
-    //   cur = stack.pop();
-    //   // 中序
-    //   // result.push(cur.val);
-    //   cur = cur.right;
-    // }
     if (cur) {
+      // 记录该节点
       stack.push(cur);
+      // 保存节点值
       result.push(cur.val);
-      // 需先遍历右子树
+      // 需先遍历右子树，再遍历左子树
       cur = cur.right;
     } else {
+      // 弹出栈顶节点（父节点）
       cur = stack.pop();
+      // 右子树遍历完毕，开始遍历左子树
       cur = cur.left;
     }
   }
-  // 相较前序和中序，后序使用 前-右-左 然后数组取反
+  // 后序排列：左-右-父。当前数组为 父-右-左 的结点保存顺序，所以最后数组取反
   return result.reverse();
 };
 
