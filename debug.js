@@ -1,13 +1,13 @@
-var fs = require('fs');
-var path = require('path');
-var colors = require('colors');
+const fs = require('fs');
+const path = require('path');
+const colors = require('colors');
 
-var path = __dirname + '/problems';
-var problems = fs.readdirSync(path);
+const path = __dirname + '/problems';
+const problems = fs.readdirSync(path);
 
-// var num = process.env.n || 24;
+// const num = process.env.n || 24;
 //匹配对应题目
-// let reg = new RegExp(num);
+// const reg = new RegExp(num);
 // let problem = '';
 // for (let i = 0; i < problems.length; i++) {
 //   if (reg.test(problems[i])) {
@@ -21,7 +21,7 @@ problems.forEach(problem => {
   let fns = require('./problems/' + problem + '/index.js');
   if (Object.prototype.toString.call(fns) === '[object Array') fns = fns[0];
   const demos = require('./problems/' + problem + '/test.js');
-  fns.forEach((fn, n) => {
+  fns.forEach(fn => {
     console.log(`name: ${fn ? fn.name : 'null'.red}`);
     demos.forEach((v, i) => {
       if (!fn) return;

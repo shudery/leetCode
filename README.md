@@ -1,4 +1,4 @@
-# leetCode
+# LeetCode
 
 ![Travis](https://img.shields.io/travis/rust-lang/rust.svg)
 
@@ -18,13 +18,13 @@
 
 使用 mocha + chai + benchmark 来测试算法准确和性能。
 
-#### 安装依赖
+### 安装依赖
 
 ```js
 npm install
 ```
 
-#### 测试单个题目
+### 测试单个题目
 
 ```js
 // 测试题号001，传入n=001，返回测试结果
@@ -33,7 +33,7 @@ n=001 npm test
 n=001 npm run perf
 ```
 
-#### 测试所有题目
+### 测试所有题目
 
 ```js
 npm test
@@ -47,16 +47,20 @@ npm run perf
 npm run debug
 ```
 
-#### 新建题目
+### 新建题目
 
-自动生成新题目的文件目录，并在 readme 插入一条相关的信息。
+自动生成新题目的文件目录，根据模板生成相应文件，并在 readme 插入一条相关的信息。
 
 ```shell
 ./crepro.sh 999-template-test Easy
 # ./crepro.sh {题目序号}-{题目(-分隔单词)} {题目难度}
 ```
 
+PS：目前还需要手动 copy 一下题目内容和测试用例到本地，并导出函数，后续考虑通过自动化爬虫抓取。
+
 ### LeetCode Algorithm
+
+完成的算法题列表，当前仅有 JavaScript 的解法。
 
 | #   | Title                                                                                                                              | Solution                                                                             | Difficulty |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ---------- |
@@ -103,6 +107,5 @@ npm run debug
 | 103 | [binary-tree-zigzag-level-order-traversal/](https://oj.leetcode.com/problems/binary-tree-zigzag-level-order-traversal//)           | [JavaScript](./problems/103-binary-tree-zigzag-level-order-traversal//index.js)      | medium     |
 | 107 | [binary-tree-level-order-traversal-ii](https://oj.leetcode.com/problems/binary-tree-level-order-traversal-ii/)                     | [JavaScript](./problems/107-binary-tree-level-order-traversal-ii/index.js)           | easy       |
 | 144 | [binary-tree-preorder-traversal](https://oj.leetcode.com/problems/binary-tree-preorder-traversal/)                                 | [JavaScript](./problems/144-binary-tree-preorder-traversal/index.js)                 | medium     |
-|145|[binary-tree-postorder-traversal](https://oj.leetcode.com/problems/binary-tree-postorder-traversal/)| [JavaScript](./problems/145-binary-tree-postorder-traversal/index.js)|hard|
-|146|[lru-cache](https://oj.leetcode.com/problems/lru-cache/)| [JavaScript](./problems/146-lru-cache/index.js)|hard|
-|999|[test](https://oj.leetcode.com/problems/test/)| [JavaScript](./problems/999-test/index.js)|easy|
+| 145 | [binary-tree-postorder-traversal](https://oj.leetcode.com/problems/binary-tree-postorder-traversal/)                               | [JavaScript](./problems/145-binary-tree-postorder-traversal/index.js)                | hard       |
+| 146 | [lru-cache](https://oj.leetcode.com/problems/lru-cache/)                                                                           | [JavaScript](./problems/146-lru-cache/index.js)                                      | hard       |

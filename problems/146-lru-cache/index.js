@@ -41,6 +41,7 @@ var LRUCache = function(capacity) {
         break;
       }
     }
+    // 性能差
     // this.freshStack = this.freshStack.filter(v => v !== key);
     this.freshStack.unshift(key);
   };

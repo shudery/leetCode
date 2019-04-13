@@ -1,95 +1,88 @@
-var Benchmark = require('benchmark');
-var colors = require('colors');
-var fs = require('fs');
-var _ = require('daguo');
-var suite = new Benchmark.Suite();
-var num = process.env.n || 001;
+const Benchmark = require('benchmark');
+const colors = require('colors');
+const fs = require('fs');
+const _ = require('daguo');
+const suite = new Benchmark.Suite();
+const num = process.env.n || 001;
+const logger = console.log;
 
-var path = './problems';
-var problems = fs.readdirSync(path);
+const path = './problems';
+const problems = fs.readdirSync(path);
 
-//匹配对应题目
-let reg = new RegExp(num);
-let problem = '';
-for (let i = 0; i < problems.length; i++) {
-  if (reg.test(problems[i])) {
-    problem = problems[i];
-    break;
-  }
-}
+// 根据题号匹配对应题目
+const reg = new RegExp(num);
+const problem = problems.find(problem => reg.test(problem));
 
-let fns = require('./problems/' + problem + '/index.js');
-let demos = require('./problems/' + problem + '/test.js');
-//传值不传引用
-let demo = _.clone(demos);
-//函数性能测试
-speedTest(problem, fns, demo);
+const fns = require('./problems/' + problem + '/index.js');
+const testCases = require('./problems/' + problem + '/test.js');
+speedTest(problem, _.clone(testCases), fns);
 
-function speedTest(problem, fns, demo) {
-  console.log(('<--start fns speed test-->' + problem).underline + '\n');
+/**
+ * 性能测试函数
+ * @param {*} problem 测试的题目目录
+ * @param {*} testCases 测试用例
+ * @param {*} fns 测试的函数
+ */
+function speedTest(problem, testCases, fns) {
+  logger(('<--start fns speed test-->' + problem).underline + '\n');
   //非数组引用报错
   if (Object.prototype.toString.call(fns) !== '[object Array]') {
-    console.log(
-      (
-        './problems/' +
-        problem +
-        '/index.js \n--you can export a array fns for comparing speed between 2 or more fns'
-      ).yellow
-    );
+    const str = `./problems/${problem}/index.js \n--you can export a array fns for comparing speed between 2 or more fns`
+      .yellow;
+    logger(str);
     return;
   }
-  //时间性能排名
-  var timeRank = [];
 
-  var evalStr = 'suite';
-  fns.forEach((fn, i) => {
-    evalStr +=
-      '.add("' +
-      fn.name +
-      '", function() {\
-            fns[' +
-      i +
-      '].apply(null,demo[0].input);\
-        })';
-  });
+  // 运算耗时排名
+  const timeRank = [];
+
+  const evalStr = fns.reduce(
+    (pre, cur, i) =>
+      pre +
+      `.add("${
+        cur.name
+      }", function() {fns[${i}].apply(null,testCases[0].input);})`,
+    'suite'
+  );
   eval(evalStr)
-    .on('cycle', function(event) {
-      var info = String(event.target);
-      var obj = {};
-      console.log(info.yellow);
-      obj.name = info.split(' x ')[0];
-      obj.time = info.split(' x ')[1].split(' ops/sec')[0];
-      timeRank.push(obj);
-    })
+    .on('cycle', event => handleCycle(event, timeRank))
     .on('complete', function() {
       // 运行时间排序
-      for (var i = 0, len = timeRank.length; i < len; i++) {
-        for (var j = 0; j < len - i - 1; j++) {
-          //比较相邻元素
-          if (
-            +timeRank[j].time.replace(/,/g, '') <
-            +timeRank[j + 1].time.replace(/,/g, '')
-          ) {
-            [timeRank[j].time, timeRank[j + 1].time] = [
-              timeRank[j + 1].time,
-              timeRank[j].time
-            ];
-            [timeRank[j].name, timeRank[j + 1].name] = [
-              timeRank[j + 1].name,
-              timeRank[j].name
-            ];
-          }
-        }
-      }
-      var label = [];
-      timeRank.forEach(val => {
-        label.push(val.name + ' >>> ' + val.time);
+      sort(timeRank);
+      const label = [];
+      timeRank.forEach(result => {
+        label.push(`${result.name} >>> ${result.time}`);
       });
-      // console.log(('Alltest : ' + this.filter('successful').map('name')).yellow);
-      console.log(('Allrank : ' + label.join('\n          ')).blue);
-      console.log(('Fastest : ' + this.filter('fastest').map('name')).green);
-      console.log(('Slowest : ' + this.filter('slowest').map('name')).red);
+      logger(this);
+      logger(`Allrank :\n${label.join('\n')}`.blue);
+      logger(`Fastest :\n${this.filter('fastest').map('name')}`.green);
+      logger(`Slowest :\n${this.filter('slowest').map('name')}`.red);
     })
-    // 这里的 async 不是 mocha 测试那个 async 的意思，这个选项与它的时间计算有关，默认勾上就好了。
+    // 这个选项与时间计算有关
     .run({ async: true });
+}
+
+function handleCycle(event, timeRank) {
+  const info = String(event.target);
+  logger(info.yellow);
+  timeRank.push({
+    name: info.split(' x ')[0],
+    time: info.split(' x ')[1].split(' ops/sec')[0]
+  });
+}
+
+/**
+ * 测试结果排序
+ * @param {*} arr
+ */
+function sort(arr) {
+  for (let i = 0, len = arr.length; i < len; i++) {
+    for (let j = 0; j < len - i - 1; j++) {
+      //比较相邻元素
+      if (+arr[j].time.replace(/,/g, '') < +arr[j + 1].time.replace(/,/g, '')) {
+        [arr[j].time, arr[j + 1].time] = [arr[j + 1].time, arr[j].time];
+        [arr[j].name, arr[j + 1].name] = [arr[j + 1].name, arr[j].name];
+      }
+    }
+  }
 }
