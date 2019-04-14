@@ -13,7 +13,6 @@ mkdir ./problems/${num}
 echo "create index.js"
 echo "// Title  : ${title}" >> ./problems/${num}/index.js
 echo "// Date   :" `date +%F` >> ./problems/${num}/index.js
-echo "// Author : Daguo" >> ./problems/${num}/index.js
 echo -e "/*****************************************\n\n*****************************************/" >> ./problems/${num}/index.js
 echo -e "\n\nmodule.exports = [null];" >> ./problems/${num}/index.js
 

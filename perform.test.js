@@ -15,27 +15,21 @@ const problem = problems.find(problem => reg.test(problem));
 
 const fns = require('./problems/' + problem + '/index.js');
 const testCases = require('./problems/' + problem + '/test.js');
-speedTest(problem, _.clone(testCases), fns);
+perfTest(problem, _.clone(testCases), fns);
 
 /**
- * 性能测试函数
+ * 运行性能测试
  * @param {*} problem 测试的题目目录
  * @param {*} testCases 测试用例
  * @param {*} fns 测试的函数
  */
-function speedTest(problem, testCases, fns) {
+function perfTest(problem, testCases, fns) {
   logger(('<--start fns speed test-->' + problem).underline + '\n');
-  //非数组引用报错
-  if (Object.prototype.toString.call(fns) !== '[object Array]') {
-    const str = `./problems/${problem}/index.js \n--you can export a array fns for comparing speed between 2 or more fns`
-      .yellow;
-    logger(str);
-    return;
-  }
-
+  //非数组报错
+  isArray(problem, fns);
   // 运算耗时排名
   const timeRank = [];
-
+  // 执行字符串
   const evalStr = fns.reduce(
     (pre, cur, i) =>
       pre +
@@ -47,13 +41,12 @@ function speedTest(problem, testCases, fns) {
   eval(evalStr)
     .on('cycle', event => handleCycle(event, timeRank))
     .on('complete', function() {
-      // 运行时间排序
+      // 对运行时间排序
       sort(timeRank);
       const label = [];
       timeRank.forEach(result => {
         label.push(`${result.name} >>> ${result.time}`);
       });
-      logger(this);
       logger(`Allrank :\n${label.join('\n')}`.blue);
       logger(`Fastest :\n${this.filter('fastest').map('name')}`.green);
       logger(`Slowest :\n${this.filter('slowest').map('name')}`.red);
@@ -84,5 +77,14 @@ function sort(arr) {
         [arr[j].name, arr[j + 1].name] = [arr[j + 1].name, arr[j].name];
       }
     }
+  }
+}
+
+function isArray(problem, fns) {
+  if (Object.prototype.toString.call(fns) !== '[object Array]') {
+    const str = `./problems/${problem}/index.js \n--you can export a array fns for comparing speed between 2 or more fns`
+      .yellow;
+    logger(str);
+    return true;
   }
 }

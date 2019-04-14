@@ -12,18 +12,11 @@ console.log('<--start fns AC test-->'.underline);
 if (num) {
   // 测试指定题目
   const reg = new RegExp(num);
-  let problem = '';
-  problems.forEach(val => {
-    if (reg.test(val)) {
-      problem = val;
-    }
-  });
+  const problem = problems.find(val => reg.test(val));
   runTest(problem);
 } else {
   // 测试所以题目
-  problems.forEach(problem => {
-    runTest(problem);
-  });
+  problems.forEach(problem => runTest(problem));
 }
 
 /**
