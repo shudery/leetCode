@@ -108,3 +108,4 @@ npm run debug
 | 144 | [binary-tree-preorder-traversal](https://oj.leetcode.com/problems/binary-tree-preorder-traversal/)                                 | [JavaScript](./problems/144-binary-tree-preorder-traversal/index.js)                 | medium     |
 | 145 | [binary-tree-postorder-traversal](https://oj.leetcode.com/problems/binary-tree-postorder-traversal/)                               | [JavaScript](./problems/145-binary-tree-postorder-traversal/index.js)                | hard       |
 | 146 | [lru-cache](https://oj.leetcode.com/problems/lru-cache/)                                                                           | [JavaScript](./problems/146-lru-cache/index.js)                                      | hard       |
+|023|[merge-two-sorted-lists](https://oj.leetcode.com/problems/merge-two-sorted-lists/)| [JavaScript](./problems/023-merge-two-sorted-lists/index.js)|easy|
