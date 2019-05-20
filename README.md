@@ -57,6 +57,12 @@ npm run perf
 npm run debug
 ```
 
+#### 数据结构构造函数
+
+```js
+const { mapLinks, mapTree } = require('../../utils/map');
+```
+
 ### LeetCode Algorithm
 
 完成的算法题列表，当前仅有 JavaScript 的解法。
@@ -108,5 +114,6 @@ npm run debug
 | 144 | [binary-tree-preorder-traversal](https://oj.leetcode.com/problems/binary-tree-preorder-traversal/)                                 | [JavaScript](./problems/144-binary-tree-preorder-traversal/index.js)                 | medium     |
 | 145 | [binary-tree-postorder-traversal](https://oj.leetcode.com/problems/binary-tree-postorder-traversal/)                               | [JavaScript](./problems/145-binary-tree-postorder-traversal/index.js)                | hard       |
 | 146 | [lru-cache](https://oj.leetcode.com/problems/lru-cache/)                                                                           | [JavaScript](./problems/146-lru-cache/index.js)                                      | hard       |
-|023|[merge-two-sorted-lists](https://oj.leetcode.com/problems/merge-two-sorted-lists/)| [JavaScript](./problems/023-merge-two-sorted-lists/index.js)|easy|
-|009|[palindrome-number](https://oj.leetcode.com/problems/palindrome-number/)| [JavaScript](./problems/009-palindrome-number/index.js)|easy|
+| 023 | [merge-two-sorted-lists](https://oj.leetcode.com/problems/merge-two-sorted-lists/)                                                 | [JavaScript](./problems/023-merge-two-sorted-lists/index.js)                         | easy       |
+| 009 | [palindrome-number](https://oj.leetcode.com/problems/palindrome-number/)                                                           | [JavaScript](./problems/009-palindrome-number/index.js)                              | easy       |
+| 005 | [longest-palindromic-substring](https://oj.leetcode.com/problems/longest-palindromic-substring/)                                   | [JavaScript](./problems/006-longest-palindromic-substring/index.js)                  | medium     |
