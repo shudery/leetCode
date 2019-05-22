@@ -119,3 +119,4 @@ const { mapLinks, mapTree } = require('../../utils/map');
 | 005 | [longest-palindromic-substring](https://oj.leetcode.com/problems/longest-palindromic-substring/)                                   | [JavaScript](./problems/006-longest-palindromic-substring/index.js)                  | medium     |
 | 007 | [reverse-integer](https://oj.leetcode.com/problems/reverse-integer/)                                                               | [JavaScript](./problems/007-reverse-integer/index.js)                                | easy       |
 | 014 | [longest-common-prefix](https://oj.leetcode.com/problems/longest-common-prefix/)                                                   | [JavaScript](./problems/14-longest-common-prefix/index.js)                           | easy       |
+|028|[implement-strstr](https://oj.leetcode.com/problems/implement-strstr/)| [JavaScript](./problems/028-implement-strstr/index.js)|easy|
