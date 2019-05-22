@@ -120,3 +120,4 @@ const { mapLinks, mapTree } = require('../../utils/map');
 | 007 | [reverse-integer](https://oj.leetcode.com/problems/reverse-integer/)                                                               | [JavaScript](./problems/007-reverse-integer/index.js)                                | easy       |
 | 014 | [longest-common-prefix](https://oj.leetcode.com/problems/longest-common-prefix/)                                                   | [JavaScript](./problems/14-longest-common-prefix/index.js)                           | easy       |
 |028|[implement-strstr](https://oj.leetcode.com/problems/implement-strstr/)| [JavaScript](./problems/028-implement-strstr/index.js)|easy|
+|035|[search-insert-position](https://oj.leetcode.com/problems/search-insert-position/)| [JavaScript](./problems/035-search-insert-position/index.js)||
