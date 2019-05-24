@@ -123,3 +123,4 @@ const { mapLinks, mapTree } = require('../../utils/map');
 |035|[search-insert-position](https://oj.leetcode.com/problems/search-insert-position/)| [JavaScript](./problems/035-search-insert-position/index.js)||
 |010|[regular-expression-matching](https://oj.leetcode.com/problems/regular-expression-matching/)| [JavaScript](./problems/010-regular-expression-matching/index.js)|hard|
 |053|[maximum-subarray](https://oj.leetcode.com/problems/maximum-subarray/)| [JavaScript](./problems/053-maximum-subarray/index.js)|easy|
+|070|[climbing-stairs](https://oj.leetcode.com/problems/climbing-stairs/)| [JavaScript](./problems/070-climbing-stairs/index.js)|easy|
