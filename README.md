@@ -121,3 +121,5 @@ const { mapLinks, mapTree } = require('../../utils/map');
 | 014 | [longest-common-prefix](https://oj.leetcode.com/problems/longest-common-prefix/)                                                   | [JavaScript](./problems/14-longest-common-prefix/index.js)                           | easy       |
 |028|[implement-strstr](https://oj.leetcode.com/problems/implement-strstr/)| [JavaScript](./problems/028-implement-strstr/index.js)|easy|
 |035|[search-insert-position](https://oj.leetcode.com/problems/search-insert-position/)| [JavaScript](./problems/035-search-insert-position/index.js)||
+|010|[regular-expression-matching](https://oj.leetcode.com/problems/regular-expression-matching/)| [JavaScript](./problems/010-regular-expression-matching/index.js)|hard|
+|053|[maximum-subarray](https://oj.leetcode.com/problems/maximum-subarray/)| [JavaScript](./problems/053-maximum-subarray/index.js)|easy|
